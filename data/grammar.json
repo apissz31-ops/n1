@@ -1,0 +1,4345 @@
+[
+ {
+  "id": "g001",
+  "no": "001",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～が早いか",
+  "meaning": "~하자마자",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "電話のベルが鳴(な)るが早いか",
+    "ko": "전화 벨이 울리자마자"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～や否や",
+    "diff": "뜻은 거의 같고 더 문어적. 둘 다 뒤에 의지·명령 표현은 못 옴",
+    "ai": true
+   },
+   {
+    "pattern": "～そばから",
+    "diff": "そばから는 반복되는 일, が早いか는 한 번 일어난 일",
+    "ai": true
+   }
+  ],
+  "point": "앞 동작 직후 곧바로 다음 일이 일어난 과거 사실을 묘사. 뒤에 ～しよう・～しなさい 불가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g002",
+  "no": "002",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～そばから",
+  "meaning": "~하는 족족, ~하기가 무섭게 (반복적인 사항에 대해)",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "覚(おぼ)えるそばから忘(わす)れてしまう",
+    "ko": "외우는 족족 잊어버린다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～が早いか",
+    "diff": "が早いか는 1회성 사건, そばから는 반복",
+    "ai": true
+   }
+  ],
+  "point": "해도 해도 곧바로 무효가 되는 반복 상황에 쓰며, 뒤에는 불만스러운 결과가 옴",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g003",
+  "no": "003",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～なり",
+  "meaning": "~하자마자",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "事故(じこ)のニュースを聞くなり",
+    "ko": "사고 뉴스를 듣자마자"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～が早いか・～や否や",
+    "diff": "なり는 앞뒤 주어가 같고 주로 3인칭",
+    "ai": true
+   }
+  ],
+  "point": "동사 기본형+なり. 화자 자신의 행동에는 잘 안 쓰고, 뒤에 의지·명령 불가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g004",
+  "no": "004",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～や否や",
+  "meaning": "~하자마자",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "家に帰るやいなや",
+    "ko": "집에 돌아가자마자"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～が早いか",
+    "diff": "뜻은 거의 같음",
+    "ai": true
+   }
+  ],
+  "point": "「やいなや」 히라가나 표기로도 출제. 뒤에 의지·명령 불가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g005",
+  "no": "005",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～かたがた",
+  "meaning": "~겸해서, ~하는 김에",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "先日のお礼(れい)かたがた",
+    "ko": "일전의 답례 겸해서"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～がてら",
+    "diff": "がてら는 散歩·買い物 같은 가벼운 동작, かたがた는 お礼·ご挨拶 같은 격식 명사",
+    "ai": true
+   }
+  ],
+  "point": "명사+かたがた. 편지·인사말의 격식체(お礼かたがた、ご報告かたがた)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g006",
+  "no": "006",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～かたわら",
+  "meaning": "~하는 한편으로",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "子育(こそだ)てのかたわら",
+    "ko": "육아하는 한편으로"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ながら",
+    "diff": "ながら는 같은 순간의 동시 동작, かたわら는 본업 외에 장기간 병행",
+    "ai": true
+   }
+  ],
+  "point": "Nのかたわら / 동사 기본형+かたわら. 직업·활동을 오래 병행할 때",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g007",
+  "no": "007",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～がてら",
+  "meaning": "~겸해서, ~하는 김에",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "散歩(さんぽ)がてら",
+    "ko": "산책하는 김에"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～かたがた",
+    "diff": "かたがた는 격식 명사에, がてら는 일상 동작에",
+    "ai": true
+   }
+  ],
+  "point": "동작성 명사·동사 ます형+がてら. 散歩がてら·買い物がてら가 단골",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g008",
+  "no": "008",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～てからというもの",
+  "meaning": "~하고 나서(계속)",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "病気をしてからというもの",
+    "ko": "병을 앓고 나서"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～てから",
+    "diff": "てから는 단순한 순서, てからというもの는 그 뒤로 쭉 달라진 상태",
+    "ai": true
+   }
+  ],
+  "point": "어떤 계기 이후 상태가 크게 바뀌어 계속됨. 뒤에 지속 표현이 옴",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g009",
+  "no": "009",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～を受けて",
+  "meaning": "~을 받아, ~을 받아들여",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "反対意見(はんたいいけん)を受(う)けて、修正案(しゅうせいあん)を作成(さくせい)する",
+    "ko": "반대 의견을 받아들여, 수정안을 작성하다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～を踏(ふ)まえて",
+    "diff": "踏まえて는 근거·전제로 삼아, 受けて는 영향·요청에 대응해",
+    "ai": true
+   }
+  ],
+  "point": "앞의 사건·결과·요청에 대응해 뒤의 조치를 취하는 흐름. 뉴스·공문체에서 자주 출제",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g010",
+  "no": "010",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～を限りに",
+  "meaning": "~을 끝으로",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "このセールを限(かぎ)りに",
+    "ko": "이 세일을 끝으로"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をもって",
+    "diff": "をもって는 공식적인 종료 시점 선언",
+    "ai": true
+   }
+  ],
+  "point": "今日を限りに처럼 '이것을 마지막으로' 그만둠",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g011",
+  "no": "011",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～を皮切りに",
+  "meaning": "~을 시작으로",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "スピーチ大会をかわきりに",
+    "ko": "웅변대회를 시작으로"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をはじめ",
+    "diff": "をはじめ는 대표 예시 나열, を皮切りに는 시간적 시작점",
+    "ai": true
+   }
+  ],
+  "point": "어떤 일을 시작으로 같은 종류의 일이 잇달아 전개됨",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g012",
+  "no": "012",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～を機に",
+  "meaning": "~을 계기로, ~을 기회로",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "創立(そうりつ)20周年(しゅうねん)を機(き)に",
+    "ko": "창립 20주년을 계기로"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をきっかけに",
+    "diff": "뜻은 거의 같고 더 구어적",
+    "ai": true
+   }
+  ],
+  "point": "전환점을 계기로 새 행동을 시작. 「を機として」도 가능",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g013",
+  "no": "013",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～を経て",
+  "meaning": "~을 거쳐",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "議会(ぎかい)の承認(しょうにん)を経(へ)て",
+    "ko": "의회의 승인을 거쳐"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～を通(とお)して",
+    "diff": "通して는 매개·수단, 経て는 단계·과정을 거침",
+    "ai": true
+   }
+  ],
+  "point": "시간·장소·절차를 거쳐 다음 단계로",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g014",
+  "no": "014",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～ことだし",
+  "meaning": "~하니까",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "雨もやんだことだし",
+    "ko": "비도 그쳤으니까"
+   },
+   {
+    "ja": "天気もよいことだし、たまには童心(どうしん)に帰って魚でも捕(つか)まえに行こうかと思っています。",
+    "ko": "날씨도 좋고 하니까, 가끔은 동심으로 돌아가 물고기라도 잡으러 갈까 하고 생각하고 있습니다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 22
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ことだから",
+    "diff": "ことだから는 사람의 성격·습관을 근거로 한 판단(~이니까 틀림없이)",
+    "ai": true
+   }
+  ],
+  "point": "여러 이유 중 하나를 가볍게 들고, 뒤에 ～よう・～ましょう 같은 의지·권유가 자주 옴",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g015",
+  "no": "015",
+  "src": "n1_grammar.pdf",
+  "page": 1,
+  "check": false,
+  "pattern": "～こととて",
+  "meaning": "~이어서",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "慣(な)れぬこととて",
+    "ko": "익숙하지 않아서"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ことだから",
+    "diff": "ことだから는 성격·습관 근거, こととて는 고어적 이유·변명",
+    "ai": true
+   }
+  ],
+  "point": "고어적 이유 표현. 사과·변명 문맥(慣れぬこととて、失礼しました)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g016",
+  "no": "016",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～だけあって・～だけに",
+  "meaning": "~인 만큼 (당연히), ~이기 때문에 (역시)",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "有名な観光地(かんこうち)だけあって、山からの眺(なが)めはすばらしかった",
+    "ko": "유명한 관광지인 만큼, 산에서 본 경치는 훌륭했다"
+   },
+   {
+    "ja": "日本一(にっぽんいち)のすし屋の娘(むすめ)だけあって、彼女(かのじょ)はさすがに魚の種類(しゅるい)に詳(くわ)しい。",
+    "ko": "일본 제일의 초밥집 딸인 만큼, 그녀는 과연 생선의 종류를 잘 안다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 31
+   },
+   {
+    "ja": "この松茸(まつたけ)は最高品(さいこうひん)だけど、産地直売(さんちちょくばい)だけのことはあってめちゃくちゃ安い。",
+    "ko": "이 송이버섯은 최상품이지만, 산지 직매라 할 만하게 굉장히 싸다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 31
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～だけのことはある",
+    "diff": "문말형. ~라 할 만하다, ~라 할 만한 가치가 있다"
+   }
+  ],
+  "point": "뒷문장이 긍정적 결과로 이어지지 않을 때는 ～だけに만 사용 가능",
+  "speed": true
+ },
+ {
+  "id": "g017",
+  "no": "017",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～ではあるまいし",
+  "meaning": "~도 아닐테고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "子どもではあるまいし",
+    "ko": "애도 아닐 테고"
+   },
+   {
+    "ja": "「どうせ大したものが入っているわけではあるまい」と思ったものの、結局(けっきょく)買ってしまった。",
+    "ko": "‘어차피 대단한 게 들어 있는 것도 아닐 거야’라고 생각했지만, 결국 사고 말았다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 42
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ではあるまい",
+    "diff": "~하지 않을 것이다, ~도 아닐 것이다"
+   }
+  ],
+  "point": "뒤에 비판·충고·명령 표현이 옴(子供ではあるまいし、自分でやりなさい)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g018",
+  "no": "018",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～ゆえに",
+  "meaning": "~해서, ~하기 때문에",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "失敗(しっぱい)を恐(おそ)れるがゆえに",
+    "ko": "실패를 두려워해서"
+   },
+   {
+    "ja": "女性(じょせい)であるがゆえにこんな差別(さべつ)を受(う)けなければならないなんて、不公平(ふこうへい)だ。",
+    "ko": "여성이기 때문에 이런 차별을 받아야 하다니 불공평하다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 103
+   },
+   {
+    "ja": "これもみな私の未熟(みじゅく)さゆえのことです。",
+    "ko": "이것도 모두 저의 미숙함 때문에 일어난 일입니다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 103
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ゆえの",
+    "diff": "~때문에 하는(명사 수식)"
+   }
+  ],
+  "point": "명사(である)·보통형+(が)ゆえに. 딱딱한 문어체 이유",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g019",
+  "no": "019",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～次第",
+  "meaning": "~에 달려 있음, ~나름",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "勝負(しょうぶ)はその日の体調(たいちょう)次第(しだい)だ",
+    "ko": "승부는 그 날의 컨디션에 달려 있다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "동사 ます형+次第",
+    "diff": "~하는 대로 곧(着き次第連絡する)",
+    "ai": true
+   }
+  ],
+  "point": "명사+次第だ(~에 달려 있다)와 ます형+次第(~하자마자 바로)를 구분",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g020",
+  "no": "020",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～たが最後",
+  "meaning": "한 번 ~했다 하면",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "信用(しんよう)は一度なくしたが最後(さいご)",
+    "ko": "신용은 한 번 잃었다 하면"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～たら最後",
+    "diff": "같은 뜻의 구어형",
+    "ai": true
+   }
+  ],
+  "point": "한 번 ~하면 끝장. 뒤에는 돌이킬 수 없는 부정적 결과",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g021",
+  "no": "021",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～とあれば",
+  "meaning": "~라면",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "お金のためとあれば",
+    "ko": "돈을 위해서라면"
+   },
+   {
+    "ja": "君(きみ)がうそをついたとあっては許(ゆる)すわけにはいかない。",
+    "ko": "자네가 거짓말을 한 거라면 용서할 수는 없어.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 44
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とあっては",
+    "diff": "~이라면. 뒤에 '할 수 없다' 같은 부정 판단이 오기 쉬움",
+    "ai": true
+   }
+  ],
+  "point": "특별한 사정이라면 기꺼이 ~한다는 의지·판단",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g022",
+  "no": "022",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～なくして(は)",
+  "meaning": "~없이(는)",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "努力(どりょく)なくしては",
+    "ko": "노력 없이는"
+   },
+   {
+    "ja": "皆様(みなさま)のご協力(きょうりょく)なくしては、とてもこの事業は達成(たっせい)できなかったであろう。",
+    "ko": "여러분의 협력 없이는, 도저히 이 사업은 달성할 수 없었을 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 64
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～なしに(は)",
+    "diff": "같은 뜻(~없이(는))"
+   }
+  ],
+  "point": "명사+なくして(は)~ない. 뒤에 반드시 부정·불가능 표현",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g023",
+  "no": "023",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～なしに(は)",
+  "meaning": "~없이(는)",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "涙(なみだ)なしには語れない",
+    "ko": "눈물 없이는 말할 수 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～なくして(は)",
+    "diff": "같은 뜻(~없이(는))"
+   }
+  ],
+  "point": "~없이(는) ~할 수 없다. 「断りなしに」처럼 '~없이 함부로' 용법도 있음",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g024",
+  "no": "024",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～に言わせれば・～に言わせると",
+  "meaning": "~에게 말하라고 한다면, ~의 의견으로는",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "10,000円という値段(ねだん)は、父に言わせれば安い方らしい",
+    "ko": "10,000엔이라는 가격은 아버지의 의견으로는 저렴한 편인 것 같다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～からすれば",
+    "diff": "からすれば는 관점 일반, に言わせれば는 그 사람의 독자적 의견",
+    "ai": true
+   }
+  ],
+  "point": "사람 명사+に言わせれば. 남과 다른 개인 의견임을 강조",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g025",
+  "no": "025",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～にすれば・～にしたら",
+  "meaning": "~이라면, ~입장에서는",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "その出来事は私にすれば驚(おどろ)きだった",
+    "ko": "그 사건은 내 입장에서는 놀라운 것이었다"
+   },
+   {
+    "ja": "あの人の立場にしたら、そんなことはできなかっただろう。",
+    "ko": "그 사람의 입장에서는, 그런 일은 할 수 없었을 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 72
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～にしても",
+    "diff": "~라고 해도"
+   }
+  ],
+  "point": "사람 명사에 붙어 그 사람의 입장을 헤아림",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g026",
+  "no": "026",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～ばそれまでだ",
+  "meaning": "~하면 그것으로 끝이다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "落(お)としてしまえばそれまでだ",
+    "ko": "떨어뜨려버리면 그것으로 끝이다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～たらそれまでだ",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "아무리 노력해도 ~하면 모든 게 끝·소용없다",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g027",
+  "no": "027",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～ものなら",
+  "meaning": "① ~라도 하게 되면, ~했다가는 ② ~할 수만 있다면",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "間違(まちが)いをしようものなら",
+    "ko": "실수라도 하게 되면"
+   },
+   {
+    "ja": "子どものころに戻(もど)れるものなら",
+    "ko": "어린 시절로 돌아갈 수만 있다면"
+   },
+   {
+    "ja": "掃除(そうじ)をさぼろうものなら、先生にしかられる。",
+    "ko": "청소를 땡땡이 쳤다가는 선생님에게 야단맞는다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 100
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "의지형+ものなら",
+    "diff": "~했다가는 (큰일 난다)",
+    "ai": true
+   }
+  ],
+  "point": "가능형+ものなら(~할 수만 있다면) / 의지형+ものなら(~했다가는) 구분",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g028",
+  "no": "028",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～たところで",
+  "meaning": "~해 보았자, ~한들",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "いくら急いだところで",
+    "ko": "아무리 서둘러 보았자"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ても",
+    "diff": "일반적인 역접",
+    "ai": true
+   }
+  ],
+  "point": "뒤에 '소용없다·무리다' 같은 부정적 판단. いくら/どんなに와 호응",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g029",
+  "no": "029",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～だろうに",
+  "meaning": "~텐데",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "合格(ごうかく)できただろうに",
+    "ko": "합격할 수 있었을 텐데"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ものを",
+    "diff": "ものを는 불만·유감이 더 강함",
+    "ai": true
+   }
+  ],
+  "point": "실제와 다른 상황을 가정하며 안타까움·동정을 표현",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g030",
+  "no": "030",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～であれ",
+  "meaning": "~이든, ~라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "理由(りゆう)は何であれ",
+    "ko": "이유는 무엇이든"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～であろうと",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "何であれ·誰であれ처럼 의문사와 결합해 '무엇이든'",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g031",
+  "no": "031",
+  "src": "n1_grammar.pdf",
+  "page": 2,
+  "check": false,
+  "pattern": "～と思いきや",
+  "meaning": "~라고 생각했는데",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "風邪(かぜ)が治(なお)ったと思いきや",
+    "ko": "감기가 나았다고 생각했는데"
+   },
+   {
+    "ja": "てっきり二人は結婚(けっこん)すると思いきや、実(じつ)はただの飲み友だった。",
+    "ko": "틀림없이 두 사람은 결혼할 거라고 생각했는데, 실은 그냥 술친구였다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 49
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～かと思ったら",
+    "diff": "구어적 표현",
+    "ai": true
+   }
+  ],
+  "point": "뒤에는 의외의 결과가 따라옴",
+  "speed": true
+ },
+ {
+  "id": "g032",
+  "no": "032",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～ところを",
+  "meaning": "~한 중에, ~한데도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "本日はお忙(いそが)しいところを",
+    "ko": "오늘은 바쁘신데도"
+   },
+   {
+    "ja": "先日はお忙(いそが)しいところをおいでくださいまして、本当(ほんとう)にありがとうございました。",
+    "ko": "일전에는 바쁘신 중에 와 주셔서 정말로 감사했습니다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 54
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～のに",
+    "diff": "일반적인 역접",
+    "ai": true
+   }
+  ],
+  "point": "お忙しいところを·お休みのところを 등 감사·사과 인사말에서 출제",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g033",
+  "no": "033",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～とはいえ",
+  "meaning": "~라고는 해도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "仕事が忙(いそが)しいとはいえ",
+    "ko": "일이 바쁘다고는 해도"
+   },
+   {
+    "ja": "男女平等(だんじょびょうどう)とはいえ、女性(じょせい)が社会に出て働くうえでまだまだ不合理(ふごうり)な制度(せいど)が多い。",
+    "ko": "남녀평등이라고는 해도 여성이 사회에 나가 일하는 데 있어서 아직도 불합리한 제도가 많다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 58
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とはいうものの",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "앞 사실을 인정하면서도 실제는 다르다는 역접",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g034",
+  "no": "034",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～ながらも",
+  "meaning": "~라 할지라도, ~하지만",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "小さいながらも",
+    "ko": "작지만"
+   },
+   {
+    "ja": "苦労(くろう)の末(すえ)に手に入れた2DKの部屋は、狭(せま)いながらも楽しいわが家だ。",
+    "ko": "고생 끝에 구입한 2DK의 방은 좁지만 즐거운 우리 집이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 63
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～つつも",
+    "diff": "동사에 붙는 문어적 역접",
+    "ai": true
+   }
+  ],
+  "point": "형용사·명사·동사 ます형+ながらも. 예상과 다른 결과",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g035",
+  "no": "035",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～ものを",
+  "meaning": "~텐데",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "何とかしてあげたものを",
+    "ko": "어떻게든 해 주었을 텐데"
+   },
+   {
+    "ja": "対応(たいおう)がもっと早ければよかったものを、救助(きゅうじょ)が遅(おく)れて被害(ひがい)が広がった。",
+    "ko": "대응이 좀 더 빨랐더라면 좋았을 텐데, 구조가 늦어져 피해가 커졌다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 102
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～のに",
+    "diff": "일반적인 역접·불만",
+    "ai": true
+   }
+  ],
+  "point": "~했으면 좋았을 텐데 하는 불만·후회. 문말에도 옴",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g036",
+  "no": "036",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～(よ)うが・～(よ)うと",
+  "meaning": "~하더라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "何年かかろうと",
+    "ko": "몇 년이 걸릴지라도"
+   },
+   {
+    "ja": "鈴木(すずき)さんという人は、他人(たにん)がどんなに困(こま)ろうが、まったく気にかけない冷たい人だ。",
+    "ko": "스즈키 씨라는 사람은 다른 사람이 아무리 곤란해 해도, 전혀 개의치 않는 매정한 사람이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 2
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～(よ)うが～まいが",
+    "diff": "~하든 ~하지 않든 (057번)"
+   },
+   {
+    "pattern": "～(よ)うか～まいか",
+    "diff": "~할까 말까. 買おうか買うまいか迷っている"
+   }
+  ],
+  "point": "どんなに・たとえ・いくら와 호응하고, 뒤에는 '상관없다·변함없다'는 내용이 옴",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g037",
+  "no": "037",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～てみせる",
+  "meaning": "~해 보이겠다, ~하고야 말겠다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "合格(ごうかく)してみせる",
+    "ko": "합격하고야 말겠다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～てやる",
+    "diff": "てやる는 반발심·상대를 위해",
+    "ai": true
+   }
+  ],
+  "point": "꼭 해내겠다는 강한 의지 표명",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g038",
+  "no": "038",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～(よ)うにも～(でき)ない",
+  "meaning": "~하려고 해도 ~할 수 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "起きようにも起きられなかった",
+    "ko": "일어나려고 해도 일어날 수 없었다"
+   },
+   {
+    "ja": "論文(ろんぶん)がまだ完成(かんせい)しないので、ディズニーランドへ遊(あそ)びに行こうにも行けない。",
+    "ko": "논문이 아직 완성되지 않아서, 디즈니랜드에 놀러 가려고 해도 갈 수 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 4
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "동사 기본형+に(も)～ない",
+    "diff": "泣くに泣けない"
+   }
+  ],
+  "point": "의지형+にも+같은 동사 가능형 부정. 사정이 있어 하고 싶어도 못 함",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g039",
+  "no": "039",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～んがため(に)",
+  "meaning": "~하기 위해(서)",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "真実(しんじつ)を明らかにせんがため",
+    "ko": "진실을 밝히기 위해"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～べく",
+    "diff": "~하기 위해"
+   }
+  ],
+  "point": "ない형+んがため. する→せんがため. 문어적 강한 목적",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g040",
+  "no": "040",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～ごとき・～ごとく",
+  "meaning": "~같은 / ~같이, ~처럼",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "別世界にいるかのごとき思い",
+    "ko": "별천지에 있는 것 같은 생각"
+   },
+   {
+    "ja": "氷(こおり)のごとく冷たい人だ",
+    "ko": "얼음같이 차가운 사람이다"
+   },
+   {
+    "ja": "君(きみ)ごとき人間(にんげん)には、僕(ぼく)の気持ちは分からないだろう。",
+    "ko": "너 같은 인간은, 내 기분은 모를 거야.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 21
+   },
+   {
+    "ja": "降る雪(ゆき)は、花が散(ち)るかのごとく見えた。",
+    "ko": "내리는 눈은 꽃이 떨어지는 것처럼 보였다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 21
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ようだ・～ように",
+    "diff": "ごとし・ごとく의 일상어",
+    "ai": true
+   }
+  ],
+  "point": "～ごとし＝ようだ / ～ごとく＝ように / ～ごとき＝①ような ②なんか",
+  "speed": true
+ },
+ {
+  "id": "g041",
+  "no": "041",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～とばかりに",
+  "meaning": "~라는 듯이",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "何も聞きたくないとばかりに",
+    "ko": "아무것도 듣고 싶지 않다는 듯이"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～んばかりに",
+    "diff": "んばかりに는 금방이라도 ~할 듯한 모양",
+    "ai": true
+   }
+  ],
+  "point": "실제로 말은 안 했지만 '~라는' 태도·몸짓이 드러남",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g042",
+  "no": "042",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～とみえる・～とみえて",
+  "meaning": "~한 것 같다 / ~한 것인지",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "車がほしいとみえて",
+    "ko": "차를 갖고 싶은 것인지"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～らしい",
+    "diff": "근거 있는 추측 일반",
+    "ai": true
+   }
+  ],
+  "point": "제3자의 모습을 근거로 한 추측. 화자 자신에게는 안 씀",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g043",
+  "no": "043",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～んばかりに",
+  "meaning": "~한 듯이",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "泣(な)き出さんばかりに",
+    "ko": "울음을 터뜨릴 듯이"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とばかりに",
+    "diff": "とばかりに는 '~라는' 말·태도",
+    "ai": true
+   }
+  ],
+  "point": "ない형+んばかり. 실제로 하지는 않았지만 금방이라도 ~할 것 같은 모양",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g044",
+  "no": "044",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～限り",
+  "meaning": "~하는 한",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "説明書を読まないかぎり",
+    "ko": "설명서를 읽지 않는 한"
+   },
+   {
+    "ja": "朝早くから営業(えいぎょう)している店は、私の調(しら)べた限(かぎ)りではここしかなかった。",
+    "ko": "아침 일찍부터 영업하고 있는 가게는, 내가 조사한 바로는 여기밖에 없었다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 6
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～限りでは",
+    "diff": "~한 바로는. 知る・調べる・見る 등 정보 범위를 한정",
+    "ai": true
+   },
+   {
+    "pattern": "～ない限り",
+    "diff": "~하지 않는 한. 뒤에 부정적 결과가 오기 쉬움",
+    "ai": true
+   }
+  ],
+  "point": "조건 범위(~하는 동안은)인지, 정보 범위(~한 바로는)인지 구분해서 고르기",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g045",
+  "no": "045",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～だに",
+  "meaning": "~하는 것만으로도, ~조차",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "想像(そうぞう)するだに恐(おそ)ろしい",
+    "ko": "상상하는 것만으로도 두렵다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～さえ",
+    "diff": "일상적인 '~조차'",
+    "ai": true
+   }
+  ],
+  "point": "想像するだに·考えるだに+恐ろしい 등 감정 표현과 고정 결합",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g046",
+  "no": "046",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～て(こそ)はじめて",
+  "meaning": "~해서야 비로소",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "一人で生活(せいかつ)してはじめて",
+    "ko": "혼자서 생활해서야 비로소"
+   },
+   {
+    "ja": "生活費(せいかつひ)を自分で稼(かせ)いでこそ、自立していると言えるだろう。",
+    "ko": "생활비를 스스로 벌어야 비로소 자립한다고 말할 수 있을 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 14
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～てこそ",
+    "diff": "~해서야 비로소"
+   }
+  ],
+  "point": "그 경험을 해 봐야 비로소 깨닫는다는 흐름",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g047",
+  "no": "047",
+  "src": "n1_grammar.pdf",
+  "page": 3,
+  "check": false,
+  "pattern": "～ならではの",
+  "meaning": "~만의",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "本場ならではの味だ",
+    "ko": "본고장만의 맛이다"
+   },
+   {
+    "ja": "今度の学園祭(がくえんさい)にはわがクラスならではの展示(てんじ)をしたいものだが、何かいい企画(きかく)はないか。",
+    "ko": "이번 학교 축제에는 우리 반 특유의 전시를 하고 싶은데, 뭔가 좋은 기획은 없을까?",
+    "src": "n1_speedgrammer.pdf",
+    "page": 66
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～らしい",
+    "diff": "전형적인 특징 일반",
+    "ai": true
+   }
+  ],
+  "point": "그것만이 가진 훌륭한 특징을 칭찬. 명사+ならではの+명사",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g048",
+  "no": "048",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～にして",
+  "meaning": "~라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "数学(すうがく)の先生にして解(と)けない",
+    "ko": "수학 선생님이라도 풀 수 없다"
+   },
+   {
+    "ja": "ベテランの彼(かれ)にしてこんな失敗(しっぱい)をするのだから、素人(しろうと)の山田君(やまだくん)が失敗するのも仕方がない。",
+    "ko": "베테랑인 그 사람이라도 이런 실수를 하니까, 초보인 야마다 군이 실수하는 것도 어쩔 수 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 73
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "＝～さえ(～できない)",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   }
+  ],
+  "point": "① 숫자나 나이 뒤에 붙어서 ~에 ② ~이기에, ~조차도 ③ ~이면서",
+  "speed": true
+ },
+ {
+  "id": "g049",
+  "no": "049",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～にしてはじめて",
+  "meaning": "~이기에 비로소",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "村山さんにしてはじめて",
+    "ko": "무라야마 씨이기에 비로소"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "＝だからこそ(出来るのだ)",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   }
+  ],
+  "point": "뛰어난 그 사람이기에 비로소 가능하다는 높은 평가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g050",
+  "no": "050",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～ばこそ",
+  "meaning": "~이기에",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "温かい家庭(かてい)があればこそ",
+    "ko": "따뜻한 가정이 있기에"
+   },
+   {
+    "ja": "私が仕事を続(つづ)けられるのも、近くに子どもの世話をしてくれる人がいればこそだ。",
+    "ko": "내가 일을 계속할 수 있는 것도 근처에 아이를 돌봐 주는 사람이 있기 때문이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 84
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～からこそ",
+    "diff": "(바로) ~이기 때문에"
+   }
+  ],
+  "point": "가정형+こそ. 뒤에 「のだ」로 끝나는 경우가 많음",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g051",
+  "no": "051",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～をおいて～ない",
+  "meaning": "~를 제외하고 ~없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "彼(かれ)をおいて、ほかにはいない",
+    "ko": "그를 제외하고 달리 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～以外に～ない",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "그 사람·것 외에는 적임자가 없다는 최고 평가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g052",
+  "no": "052",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～つ～つ",
+  "meaning": "~하기도 하고 ~하기도 하고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "山が見えつ隠(かく)れつしていた",
+    "ko": "산이 보였다 안 보였다 했다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～たり～たり",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "行きつ戻りつ·持ちつ持たれつ 등 관용구로 출제",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g053",
+  "no": "053",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～であれ～であれ",
+  "meaning": "~든 ~든",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "海であれ山であれ",
+    "ko": "바다든 산이든"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～にしろ～にしろ",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "두 가지 예를 들어 '어느 쪽이든 마찬가지'",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g054",
+  "no": "054",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～といい～といい",
+  "meaning": "~며 ~며, ~도 ~도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "色といいデザインといい",
+    "ko": "색도 디자인도"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～といわず～といわず",
+    "diff": "~할 것 없이 전부 (055번)",
+    "ai": true
+   }
+  ],
+  "point": "두 예를 들어 평가(칭찬·비난)를 강조. 뒤에 화자의 평가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g055",
+  "no": "055",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～といわず～といわず",
+  "meaning": "~며 ~며 할 것 없이",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "日本酒(にほんしゅ)と言わずビールと言わず",
+    "ko": "청주며 맥주며 할 것 없이"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～といい～といい",
+    "diff": "두 예를 들어 평가 (054번)",
+    "ai": true
+   }
+  ],
+  "point": "구분 없이 전부 그렇다. 뒤에 사실 묘사",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g056",
+  "no": "056",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～なり～なり",
+  "meaning": "~든지 ~든지",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "本を読むなりテレビを見るなり",
+    "ko": "책을 읽든지 텔레비전을 보든지"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "동사 기본형+なり",
+    "diff": "~하자마자 (003번)"
+   }
+  ],
+  "point": "예를 들어 선택지를 제시하며 권유·명령. 과거 사실에는 안 씀",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g057",
+  "no": "057",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～(よ)うが～まいが・～(よ)うと～まいと",
+  "meaning": "~하든 안 하든",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "勉強しようとしまいと(しようがしまいが)",
+    "ko": "공부하든 안 하든"
+   },
+   {
+    "ja": "彼(かれ)が食べようが食べまいが、いちおう食事の準備(じゅんび)はしなければならない。",
+    "ko": "그가 먹든 먹지 않든, 일단 식사 준비는 해야 한다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 2
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～(よ)うが・～(よ)うと",
+    "diff": "~하더라도 (036번)"
+   }
+  ],
+  "point": "의지형+が/と + 같은 동사+まい. する→しようがしまいが(すまいが)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g058",
+  "no": "058",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～きらいがある",
+  "meaning": "~하는 (좋지 않은) 경향이 있다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "悪い方に考えるきらいがある",
+    "ko": "나쁜 쪽으로 생각하는 경향이 있다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～傾向(けいこう)がある",
+    "diff": "좋고 나쁨 중립",
+    "ai": true
+   }
+  ],
+  "point": "좋지 않은 경향에만 사용",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g059",
+  "no": "059",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～つつある",
+  "meaning": "~하고 있다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "新しいビルが完成(かんせい)しつつある",
+    "ko": "새로운 빌딩이 완성되고 있다"
+   },
+   {
+    "ja": "失(うしな)われつつある自然(しぜん)を守(まも)ろうと、市民(しみん)たちは運動を始めた。",
+    "ko": "상실되고 있는 자연을 지키려고 시민들은 운동을 시작했다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 38
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～つつ(も)",
+    "diff": "~하면서(도)"
+   }
+  ],
+  "point": "변화가 진행 중임을 나타내는 문어체(～ている보다 딱딱)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g060",
+  "no": "060",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～ともなしに・～ともなく",
+  "meaning": "무심코 ~",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "見るともなしに見ていた",
+    "ko": "무심코 보고 있었다"
+   },
+   {
+    "ja": "反対(はんたい)のホームを見るともなしに見ていたら、昔(むかし)別れた恋人(こいびと)の姿(すがた)が見えた。",
+    "ko": "반대편 승강장을 무심코 보고 있었더니, 옛날에 헤어진 애인의 모습이 보였다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 59
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～つもりもなく",
+    "diff": "의도 없이",
+    "ai": true
+   }
+  ],
+  "point": "의문사(から)+ともなく ~인가, ~인지",
+  "speed": true
+ },
+ {
+  "id": "g061",
+  "no": "061",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～ながらに",
+  "meaning": "~하면서",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "涙(なみだ)ながらに語った",
+    "ko": "눈물을 흘리며 이야기했다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ながら",
+    "diff": "같은 순간의 동시 동작",
+    "ai": true
+   }
+  ],
+  "point": "涙ながらに·生まれながらに·昔ながらの 등 관용구",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g062",
+  "no": "062",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～にあって",
+  "meaning": "~에서",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "責任者(せきにんしゃ)という立場にあって",
+    "ko": "책임자라는 입장에서"
+   },
+   {
+    "ja": "彼女(かのじょ)はクラス担任(たんにん)という立場にあって、内申管理(ないしんかんり)および進学指導(しんがくしどう)などを公平(こうへい)にしなければならない。",
+    "ko": "그녀는 학급 담임이라는 입장에서, 내신 관리 및 진학 지도 등을 공평하게 해야 한다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 68
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～において",
+    "diff": "장소·시간·분야 일반",
+    "ai": true
+   }
+  ],
+  "point": "일반적 상황보다는 조금 특별한 입장, 상황 등이 앞에 온다",
+  "speed": true
+ },
+ {
+  "id": "g063",
+  "no": "063",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～にいたって",
+  "meaning": "~에 이르러서",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "マスコミで騒(さわ)がれるにいたって",
+    "ko": "매스컴에서 화제가 되기에 이르러서"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～にいたるまで",
+    "diff": "범위(~에 이르기까지)",
+    "ai": true
+   }
+  ],
+  "point": "극단적 상황에 이르러서야 비로소 ~함. 「にいたっては」는 극단적인 예",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g064",
+  "no": "064",
+  "src": "n1_grammar.pdf",
+  "page": 4,
+  "check": false,
+  "pattern": "～に即して",
+  "meaning": "~에 입각하여",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "現状(げんじょう)に即(そく)して",
+    "ko": "현 상황에 입각해서"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～に基(もと)づいて",
+    "diff": "근거·기반",
+    "ai": true
+   }
+  ],
+  "point": "현실·사실·규칙에 맞춰서. 現状に即して·法に即して",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g065",
+  "no": "065",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～にたえない",
+  "meaning": "차마 ~할 수 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "まったく聞くにたえない",
+    "ko": "정말이지 차마 듣고 있을 수 없다"
+   },
+   {
+    "ja": "有名な作家(さっか)の講演会(こうえんかい)に行ったところ、あまりに聞くにたえない内容(ないよう)でがっかりした。",
+    "ko": "유명한 작가의 강연회에 갔다가, 너무나도 차마 들을 수 없는 내용이라 실망했다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 76
+   },
+   {
+    "ja": "彼女(かのじょ)の演奏(えんそう)は、アマチュアながら鑑賞(かんしょう)にたえるようなものだった。",
+    "ko": "그녀의 연주는 아마추어이면서도 감상할 만한 연주였다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 76
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～にたえる",
+    "diff": "~할 만한"
+   }
+  ],
+  "point": "見る·聞く+にたえない(차마 못 봄) vs 感謝·遺憾+にたえない(~해 마지않다)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g066",
+  "no": "066",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～か否か",
+  "meaning": "~인지 어떨지",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "できるか否(いな)か",
+    "ko": "할 수 있을지 어떨지"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～かどうか",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "보통형+か否か. 문어체",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g067",
+  "no": "067",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～限りだ",
+  "meaning": "~하기 짝이 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "悔(くや)しいかぎりだ",
+    "ko": "분하기 짝이 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～極(きわ)まりない",
+    "diff": "상태의 극단(부정적 평가)",
+    "ai": true
+   }
+  ],
+  "point": "감정 형용사(嬉しい·悲しい·心細い)에 붙어 화자의 감정 강조",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g068",
+  "no": "068",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～極まる・～極まりない",
+  "meaning": "~하기 짝이 없다",
+  "connection": "ナ형용사 어간・イ형용사こと + 極まりない・極まる",
+  "examples": [
+   {
+    "ja": "危険(きけん)極(きわ)まりない",
+    "ko": "위험하기 짝이 없다"
+   },
+   {
+    "ja": "私は、店員の失礼(しつれい)きわまりない態度(たいど)に我慢(がまん)がならなかった。",
+    "ko": "나는 점원의 무례하기 짝이 없는 태도에 참을 수 없었다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 19
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～限りだ",
+    "diff": "화자의 감정 강조",
+    "ai": true
+   }
+  ],
+  "point": "失礼·危険·不愉快 등 부정적 평가에 주로",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g069",
+  "no": "069",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "ただ～のみ",
+  "meaning": "단지(그저) ~뿐",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "後はただ実行(じっこう)するのみだ",
+    "ko": "앞으로는 그저 실행할 뿐이다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～だけ",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "뒤에 결의·행동. 後はただ～のみだ 형태",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g070",
+  "no": "070",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～てまで",
+  "meaning": "~해서까지",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "借金(しゃっきん)してまで買うのは",
+    "ko": "빚을 내서까지 사는 것은"
+   },
+   {
+    "ja": "環境破壊(かんきょうはかい)をしてまで工業化(こうぎょうか)をおし進(すす)めていくのには疑問(ぎもん)がある。",
+    "ko": "환경을 파괴하면서까지 공업화를 밀고 나가는 것에는 의문이 있다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 93
+   },
+   {
+    "ja": "いずれにせよ、盗作(とうさく)までして賞(しょう)を取(と)ろうとする神経(しんけい)は理解(りかい)できない。",
+    "ko": "어쨌든, 표절까지 해서 상을 받으려고 하는 마음은 이해할 수 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 93
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～までして",
+    "diff": "~까지 해서"
+   }
+  ],
+  "point": "목적을 위해 극단적 수단까지 쓴다는 비판적 뉘앙스",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g071",
+  "no": "071",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～というものだ・～というものではない",
+  "meaning": "(바로) ~인 것이다 / (반드시) ~인 것은 아니다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "難(むずか)しいからこそやりがいがあるというものだ",
+    "ko": "어렵기에 보람이 있는 것이다"
+   },
+   {
+    "ja": "商品(しょうひん)は、単(たん)に値段(ねだん)が安ければ売れるというものではない",
+    "ko": "상품은 단순히 가격이 싸면 팔리는 것은 아니다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～というものではない",
+    "diff": "(반드시) ~인 것은 아니다"
+   }
+  ],
+  "point": "というものだ는 '당연히 ~이다' 단정, というものではない는 부분 부정",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g072",
+  "no": "072",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～といったらない",
+  "meaning": "매우 ~하다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "恥(は)ずかしいといったらなかった",
+    "ko": "매우 부끄러웠다"
+   },
+   {
+    "ja": "8時間(じかん)必死(ひっし)で働いて、たったの2千円(にせんえん)。ばかばかしいといったらありゃしない。",
+    "ko": "8시간 필사적으로 일하고 겨우 2천 엔. 정말이지 어처구니가 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 48
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "＝～ったらない",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   },
+   {
+    "pattern": "～といったらありゃしない・～といったらありはしない",
+    "diff": "같은 뜻"
+   }
+  ],
+  "point": "감정·상태가 말로 표현 못할 만큼 심함",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g073",
+  "no": "073",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～とは",
+  "meaning": "~라니",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "小学生が解(と)いたとは驚(おどろ)きだ",
+    "ko": "초등학생이 풀었다니 놀랍다"
+   },
+   {
+    "ja": "あの強いチームが初出場(はつしゅつじょう)チームに敗(やぶ)れるとは、全(まった)く予想外(よそうがい)だった。",
+    "ko": "그 강한 팀이 첫 출전 팀에게 패하다니 전혀 예상 밖이었다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 56
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～なんて",
+    "diff": "구어적 놀람",
+    "ai": true
+   }
+  ],
+  "point": "① ~와는 ② ~라고는 ③ ~란(~というのは) ④ ~라니(~なんて)",
+  "speed": true
+ },
+ {
+  "id": "g074",
+  "no": "074",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～ないまでも",
+  "meaning": "~까지는 하지 않더라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "最高(さいこう)の出来とはいえないまでも",
+    "ko": "최고의 작품이라고는 할 수 없어도"
+   },
+   {
+    "ja": "手品(てじな)のプロにはならないまでも、これを使って人を喜(よろこ)ばせることができたらいい。",
+    "ko": "프로 마술사까지는 되지 않더라도, 이것을 이용해 남을 기쁘게 할 수 있으면 된다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 62
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～までもない",
+    "diff": "~할 필요도 없다 (120번)",
+    "ai": true
+   }
+  ],
+  "point": "최고 수준까지는 아니어도 적어도 ~ 정도는. 뒤에 せめて·少なくとも",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g075",
+  "no": "075",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～にたる",
+  "meaning": "~할 만한",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "信頼(しんらい)にたる人だ",
+    "ko": "신뢰할 만한 사람이다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～に値(あたい)する",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "信頼にたる·尊敬にたる. 부정은 取るに足らない(하찮다)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g076",
+  "no": "076",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～ばかりになっている",
+  "meaning": "~하기만 하면 된다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "刈(か)り入れを待つばかりになっている",
+    "ko": "수확을 기다리기만 하면 된다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ばかりだ",
+    "diff": "~할 뿐(나빠지기만 한다)",
+    "ai": true
+   }
+  ],
+  "point": "준비가 다 되어 마지막 단계만 남은 상태",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g077",
+  "no": "077",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～はしない",
+  "meaning": "~하지는 않는다, ~하지는 않겠다",
+  "connection": "동사 ます형 + ～もしない／～はしない",
+  "examples": [
+   {
+    "ja": "決(けっ)してくじけはしない",
+    "ko": "결코 좌절하지는 않겠다"
+   },
+   {
+    "ja": "たまにその猫(ねこ)がベランダに逃(に)げ出して、うっかり落(お)ちはしないかとはらはらします。",
+    "ko": "가끔 그 고양이가 베란다로 도망가서, 까딱 잘못해서 떨어지지는 않을까 조마조마합니다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 97
+   },
+   {
+    "ja": "彼女(かのじょ)は、一言(ひとこと)しゃべりもしないで帰ってしまった。",
+    "ko": "그녀는 한 마디 말도 하지 않고 돌아가 버렸다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 97
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～もしない",
+    "diff": "~하지도 않다"
+   }
+  ],
+  "point": "부정을 강조. ～はしないか는 걱정(~하지는 않을까)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g078",
+  "no": "078",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～まじき",
+  "meaning": "~해서는 안 될",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "許(ゆる)すまじきことだ",
+    "ko": "용서해서는 안 될 일이다"
+   },
+   {
+    "ja": "幼(おさな)い小学生を何人も殺(ころ)すとは、人間(にんげん)にあるまじき行為(こうい)だ。",
+    "ko": "어린 초등학생을 몇 명이나 죽이다니, 인간에게 있을 수 없는 행위다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 90
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～べからざる",
+    "diff": "~해서는 안 될, ~할 수 없는 (148번)"
+   }
+  ],
+  "point": "「Nにあるまじき」「Nとしてあるまじき」 꼴로 신분·입장에 어긋난 행위를 비난. する→すまじき",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g079",
+  "no": "079",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～もさることながら",
+  "meaning": "~도 그러하지만",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "価格(かかく)やデザインもさることながら",
+    "ko": "가격이나 디자인도 그러하지만"
+   },
+   {
+    "ja": "A教授(きょうじゅ)は、研究業績(けんきゅうぎょうせき)もさることながら、政治手腕(せいじしゅわん)の方もなかなかのものだ。",
+    "ko": "A교수는, 연구실적은 물론이거니와 정치 수완 쪽도 대단하다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 96
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～はもちろん",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "앞도 물론이지만 뒤가 더 중요하다는 흐름",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g080",
+  "no": "080",
+  "src": "n1_grammar.pdf",
+  "page": 5,
+  "check": false,
+  "pattern": "～ように",
+  "meaning": "~하기를 <문말>",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "一日も早くお元気になりますように。",
+    "ko": "하루라도 빨리 건강해지시기를."
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ようにと",
+    "diff": "인용형 바람",
+    "ai": true
+   }
+  ],
+  "point": "～ますように。로 기원·바람(合格しますように)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g081",
+  "no": "081",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～あっての",
+  "meaning": "~가 있고 나서야",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "小さな成功(せいこう)も努力(どりょく)あってのことだ",
+    "ko": "작은 성공도 노력이 있기에 가능한 일이다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～からこそ",
+    "diff": "이유 강조 일반",
+    "ai": true
+   }
+  ],
+  "point": "AあってのB: A가 있기에 B가 성립(お客様あっての商売)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g082",
+  "no": "082",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～かねる",
+  "meaning": "~하기 어렵다, ~하기 곤란하다",
+  "connection": "동사 ます형 + ～かねる・～かねない",
+  "examples": [
+   {
+    "ja": "あなたの意見には賛成(さんせい)しかねます",
+    "ko": "당신의 의견에는 찬성하기 어렵습니다"
+   },
+   {
+    "ja": "誤解(ごかい)を招(まね)きかねない表現(ひょうげん)を使わないように気をつけてください。",
+    "ko": "오해를 살지도 모르는 표현을 쓰지 않도록 주의하세요.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 11
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～かねない",
+    "diff": "~할지도 모른다"
+   }
+  ],
+  "point": "かねる(~하기 어렵다·정중한 거절)와 かねない(~할 우려가 있다) 의미 반대 주의",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g083",
+  "no": "083",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～からある",
+  "meaning": "~이나 되는<크기·무게·길이 등>",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "300ページからある小説を",
+    "ko": "300페이지나 되는 소설을"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～からする",
+    "diff": "가격에 사용",
+    "ai": true
+   }
+  ],
+  "point": "수량+からある/からの. 크기·무게·길이 강조, 가격은 からする",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g084",
+  "no": "084",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～からなる",
+  "meaning": "~으로 구성되는 <요소·내용 등>",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "多民族(たみんぞく)から成(な)っている国",
+    "ko": "다민족으로 구성되어 있는 나라"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～から成(な)り立(た)つ",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "구성 요소를 나타냄. 「から成る」 한자 표기도 출제",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g085",
+  "no": "085",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～きる・～きれる・～きれない",
+  "meaning": "전부 ~하다 / 전부 ~할 수 있다 / 전부 ~할 수 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "持っているお金は使いきった",
+    "ko": "갖고 있는 돈은 다 써버렸다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～抜(ぬ)く",
+    "diff": "끝까지 해냄(힘든 일)",
+    "ai": true
+   }
+  ],
+  "point": "완전히 다 함. 数えきれない·言いきる·待ちきれない",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g086",
+  "no": "086",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～すら",
+  "meaning": "~조차, ~도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "食事をする時間(じかん)すら",
+    "ko": "식사를 할 시간조차"
+   },
+   {
+    "ja": "40度も熱があって、起きあがることすらできない。",
+    "ko": "열이 40도나 되어서 일어날 수조차 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 30
+   },
+   {
+    "ja": "今の調子(ちょうし)では、予選(よせん)に出ることさえむずかしい。",
+    "ko": "지금 상태로는 예선에 나가는 것조차 어렵다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 30
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～(で)さえ",
+    "diff": "~조차, ~도"
+   }
+  ],
+  "point": "극단적 예를 들어 다른 것은 말할 것도 없음",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g087",
+  "no": "087",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～そびれる",
+  "meaning": "~하려다 못하다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "寝そびれてしまった",
+    "ko": "잠을 설쳐 버렸다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～損(そこ)なう",
+    "diff": "실패해서 못 함",
+    "ai": true
+   }
+  ],
+  "point": "동사 ます형+そびれる. 기회를 놓쳐 못 함(言いそびれる·寝そびれる)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g088",
+  "no": "088",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～たりとも",
+  "meaning": "~이라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "一瞬(いっしゅん)たりとも油断(ゆだん)はできない",
+    "ko": "한순간이라도 방심할 수 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～さえ",
+    "diff": "일상적인 '~조차'",
+    "ai": true
+   }
+  ],
+  "point": "一+조수사+たりとも+부정. 一日たりとも·一円たりとも",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g089",
+  "no": "089",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～たるもの",
+  "meaning": "~된 자는",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "教育者(きょういくしゃ)たるもの",
+    "ko": "교육자 된 자는"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～として",
+    "diff": "자격 일반",
+    "ai": true
+   }
+  ],
+  "point": "그 입장에 있는 사람은 당연히 ~해야 한다는 흐름",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g090",
+  "no": "090",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～でなくてなんだろう",
+  "meaning": "~이 아니고 무엇이란 말인가!",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "これが幸(しあわ)せでなくてなんだろう",
+    "ko": "이것이 행복이 아니고 무엇이란 말인가!"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～にほかならない",
+    "diff": "바로 ~이다",
+    "ai": true
+   }
+  ],
+  "point": "반어로 '이것이야말로 ~이다'를 강조",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g091",
+  "no": "091",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～といえども",
+  "meaning": "~이라 할지라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "子供向(こどもむ)けの絵本(えほん)といえども",
+    "ko": "아동용 그림책이라 할지라도"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とはいえ",
+    "diff": "~라고는 해도",
+    "ai": true
+   }
+  ],
+  "point": "설령 ~라도 예외 없음. 문어체",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g092",
+  "no": "092",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～といったところだ",
+  "meaning": "(기껏해야) ~정도이다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "200人といったところだろう",
+    "ko": "200명 정도일 것이다"
+   },
+   {
+    "ja": "家の建築費(けんちくひ)は少なめに見積(みつ)もっても2千万円というところだろう。",
+    "ko": "집 건축비는 적게 어림잡아도 2천만 엔 정도일 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 47
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～というところだ",
+    "diff": "같은 뜻"
+   }
+  ],
+  "point": "많아야·기껏해야 그 정도라는 낮은 평가",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g093",
+  "no": "093",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～ときたら",
+  "meaning": "~은, ~으로 말할 것 같으면",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "彼(かれ)の答案(とうあん)ときたら、字が汚(きたな)くて読みにくい",
+    "ko": "그의 답안은 글씨가 깨끗하지 않아서 읽기 힘들다"
+   },
+   {
+    "ja": "山田君(やまだくん)ときたら、ゲーム好きでせっかく働いたアルバイト代もすべて使ってしまうらしい。",
+    "ko": "야마다 군으로 말할 것 같으면 게임을 좋아해서 모처럼 일한 아르바이트비도 전부 써 버리는 모양이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 51
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～といったら",
+    "diff": "감탄·놀람의 화제 제시",
+    "ai": true
+   }
+  ],
+  "point": "화제의 대상을 들어 불만·비난을 말함",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g094",
+  "no": "094",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～としたところで",
+  "meaning": "~라고는 해도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "すべてできたとしたところで",
+    "ko": "모두 끝났다고는 해도"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "＝～にしたところで",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   }
+  ],
+  "point": "설령 ~라 해도 결과는 마찬가지",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g095",
+  "no": "095",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～ともなると・～ともなれば",
+  "meaning": "~라도 되면, ~쯤 되면",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "上級(じょうきゅう)クラスともなると",
+    "ko": "상급반쯤 되면"
+   },
+   {
+    "ja": "一国(いっこく)の首相(しゅしょう)ともなると、忙(いそが)しくてゆっくり家族旅行(かぞくりょこう)などしてはいられないだろう。",
+    "ko": "한 나라의 수상쯤 되면, 바빠서 여유롭게 가족 여행 같은 것은 하고 있을 수 없을 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 60
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～となると",
+    "diff": "일반적인 가정",
+    "ai": true
+   }
+  ],
+  "point": "어떤 수준·입장이 되면 당연히 달라진다",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g096",
+  "no": "096",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～ならいざしらず",
+  "meaning": "~라면 몰라도",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "真夏ならいざしらず",
+    "ko": "한여름이라면 몰라도"
+   },
+   {
+    "ja": "専門家(せんもんか)ならいざしらず、素人(しろうと)ではこの機械(きかい)を修理(しゅうり)することはできない。",
+    "ko": "전문가라면 몰라도, 초보가 이 기계를 수리할 수는 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 65
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ならまだしも",
+    "diff": "같은 뜻"
+   },
+   {
+    "pattern": "～ならともかく",
+    "diff": "같은 뜻"
+   }
+  ],
+  "point": "앞은 예외로 인정하고 뒤에 비판·불가능",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g097",
+  "no": "097",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～なりに・～なりの",
+  "meaning": "~나름대로 / ~나름의",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "私なりに考えてみた",
+    "ko": "내 나름대로 생각해 보았다"
+   },
+   {
+    "ja": "金持ちは金持ちなりの",
+    "ko": "부자는 부자 나름의"
+   },
+   {
+    "ja": "私が有名な大学に入れたのは、自分なりに一生懸命(いっしょうけんめい)勉強したからだと思います。",
+    "ko": "제가 유명한 대학에 들어갈 수 있었던 것은, 제 나름대로 열심히 공부했기 때문이라고 생각합니다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 67
+   },
+   {
+    "ja": "若(わか)い人には若い人なりの考えがあるだろう。",
+    "ko": "젊은 사람에게는 젊은 사람 나름의 생각이 있을 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 67
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "동사 기본형+なり",
+    "diff": "~하자마자"
+   },
+   {
+    "pattern": "～なり～なり",
+    "diff": "~든 ~든 (선택)"
+   }
+  ],
+  "point": "충분하지 않지만 그 나름대로",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g098",
+  "no": "098",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～にかかっている",
+  "meaning": "~에 달려 있다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "あなたの熱意にかかっている",
+    "ko": "당신의 열의에 달려 있다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～次第(しだい)だ",
+    "diff": "~에 달려 있다 (019번)",
+    "ai": true
+   }
+  ],
+  "point": "결과가 ~에 달려 있다(成功は努力にかかっている)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g099",
+  "no": "099",
+  "src": "n1_grammar.pdf",
+  "page": 6,
+  "check": false,
+  "pattern": "～にとどまらず",
+  "meaning": "~에 그치지 않고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "和食にとどまらず、洋食や中華(ちゅうか)と幅広(はばひろ)い",
+    "ko": "일식에 그치지 않고, 양식이나 중화요리로 폭이 넓다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～のみならず",
+    "diff": "~뿐만 아니라",
+    "ai": true
+   }
+  ],
+  "point": "범위가 거기서 그치지 않고 더 넓게 퍼짐",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g100",
+  "no": "100",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～にのぼる",
+  "meaning": "~에 달하다 <수량의 강조>, ~에 오르다 <화제>",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "死者数(ししゃすう)は数千人(すうせんにん)にのぼる",
+    "ko": "사망자수는 수 천명에 달한다"
+   },
+   {
+    "ja": "地震(じしん)のことが話題にのぼる",
+    "ko": "지진이 화제에 오르다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～に達(たっ)する",
+    "diff": "수치 도달 일반",
+    "ai": true
+   }
+  ],
+  "point": "큰 수량 강조와 '화제에 오르다' 두 용법",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g101",
+  "no": "101",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～によるところが大きい",
+  "meaning": "~에 의한 바가 크다, ~에 힘입은 바가 크다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "彼(かれ)の成功(せいこう)は、周囲(しゅうい)の人たちの協力(きょうりょく)によるところが大きい",
+    "ko": "그의 성공은 주변 사람들의 협력에 힘입은 바가 크다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～おかげで",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "성공·결과의 큰 요인을 밝힘",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g102",
+  "no": "102",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～の至りだ",
+  "meaning": "~하기 그지없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "光栄(こうえい)の至(いた)りです",
+    "ko": "영광스럽기 그지없습니다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～の極(きわ)み",
+    "diff": "같은 뜻 (103번)",
+    "ai": true
+   }
+  ],
+  "point": "光栄の至り·若気の至り 관용구",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g103",
+  "no": "103",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～の極みだ",
+  "meaning": "~하기 그지없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "痛恨(つうこん)の極(きわ)みです",
+    "ko": "통탄스럽기 그지없습니다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～の至(いた)り",
+    "diff": "같은 뜻 (102번)",
+    "ai": true
+   }
+  ],
+  "point": "痛恨の極み·贅沢の極み 관용구",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g104",
+  "no": "104",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～は言うに及ばず",
+  "meaning": "~은 말할 것도 없고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "学力は言うに及(およ)ばず",
+    "ko": "학력은 말할 것도 없고"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～はもとより",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "Aは言うに及ばずBも: A는 당연하고 B까지",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g105",
+  "no": "105",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～はおろか",
+  "meaning": "~은커녕, ~은 고사하고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "優勝(ゆうしょう)はおろか入賞(にゅうしょう)も果(は)たせなかった",
+    "ko": "우승은커녕 입상도 할 수 없었다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～どころか",
+    "diff": "일상어, 반대 결과에도 사용",
+    "ai": true
+   }
+  ],
+  "point": "뒤에 も·さえ·すら+부정이 와서 '~는커녕 ~도 못함'",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g106",
+  "no": "106",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～はさておき",
+  "meaning": "~은 어쨌든, ~은 제쳐놓고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "見た目はさておき",
+    "ko": "외관이야 어쨌든"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～はともかく",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "일단 제쳐 두고 본론으로",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g107",
+  "no": "107",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～を余儀なくされる",
+  "meaning": "어쩔 수 없이 ~하게 되다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "中止を余儀(よぎ)なくされた",
+    "ko": "어쩔 수 없이 취소하게 되었다"
+   },
+   {
+    "ja": "楽しみにしていた文化祭(ぶんかさい)であるが、雨のため、中止を余儀(よぎ)なくされた。",
+    "ko": "기대하고 있었던 문화제지만, 비 때문에 어쩔 수 없이 중지하게 되었다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 110
+   },
+   {
+    "ja": "干(かん)ばつは野菜の値上(ねあ)げを余儀(よぎ)なくさせた。",
+    "ko": "가뭄은 어쩔 수 없이 채소 가격을 인상하게 했다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 110
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～を余儀なくさせる",
+    "diff": "어쩔 수 없이 ~하게 하다"
+   }
+  ],
+  "point": "재해·사정으로 어쩔 수 없이. 수동(される)/사역(させる) 주어 구분",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g108",
+  "no": "108",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～て(は)かなわない",
+  "meaning": "~해서(는) 견딜 수가 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "うるさくてかなわない",
+    "ko": "시끄러워서 견딜 수가 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～てたまらない",
+    "diff": "감정·감각이 견딜 수 없음",
+    "ai": true
+   }
+  ],
+  "point": "불쾌·곤란해서 견딜 수 없음(暑くてかなわない)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g109",
+  "no": "109",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～てはばからない",
+  "meaning": "~하기를 주저하지 않는다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "傑作(けっさく)だと言ってはばからない",
+    "ko": "걸작이라고 말하기를 주저하지 않는다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "遠慮(えんりょ)なく～",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "言ってはばからない·公言してはばからない 고정",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g110",
+  "no": "110",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～てもさしつかえない",
+  "meaning": "~해도 괜찮다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "早く帰ってもさしつかえない",
+    "ko": "일찍 돌아가도 좋다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～てもかまわない",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "허가의 정중·격식체",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g111",
+  "no": "111",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～てやまない",
+  "meaning": "~해 마지않다, 간절히 ~하다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "幸(しあわ)せを願(ねが)ってやまない",
+    "ko": "행복을 간절히 바란다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～てならない",
+    "diff": "자연히 그렇게 느껴짐",
+    "ai": true
+   }
+  ],
+  "point": "願う·祈る·愛する 등 감정 동사와. 화자의 강한 감정",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g112",
+  "no": "112",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～といっても過言ではない",
+  "meaning": "~라고 해도 과언이 아니다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "日本人の年中行事(ねんじゅうぎょうじ)といっても過言(かごん)ではない",
+    "ko": "일본인의 연중행사라고 해도 과언이 아니다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～と言っても言い過ぎではない",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "과장이 아니라는 강조",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g113",
+  "no": "113",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～とは限らない",
+  "meaning": "~라고는 (단정)할 수 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "値段(ねだん)が高いからといって質がいいとは限(かぎ)らない",
+    "ko": "가격이 비싸다고 해서 질이 좋다고는 할 수 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～わけではない",
+    "diff": "부분 부정 일반",
+    "ai": true
+   }
+  ],
+  "point": "からといって～とは限らない 짝으로 출제",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g114",
+  "no": "114",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～ないものでもない",
+  "meaning": "~못 할 것도 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "引き受(う)けないものでもない",
+    "ko": "맡지 못 할 것도 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ないでもない・～なくもない",
+    "diff": "~하지 않는 것도 아니다"
+   }
+  ],
+  "point": "조건에 따라 가능성이 있음을 소극적으로 표현",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g115",
+  "no": "115",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～に(は)あたらない",
+  "meaning": "~할 필요 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "非難(ひなん)するにはあたらない",
+    "ko": "비난할 필요 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～には及(およ)ばない",
+    "diff": "같은 뜻 (116번)",
+    "ai": true
+   }
+  ],
+  "point": "驚く·非難する·悲観する 등에 붙어 그럴 필요 없다",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g116",
+  "no": "116",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～に(は)及ばない",
+  "meaning": "~할 필요 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "わざわざ予約(よやく)をするには及(およ)ばないでしょう",
+    "ko": "일부러 예약을 할 필요는 없겠지요"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～にはあたらない",
+    "diff": "같은 뜻 (115번)",
+    "ai": true
+   }
+  ],
+  "point": "わざわざ~할 필요 없다. 「それには及びません」 정중한 거절",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g117",
+  "no": "117",
+  "src": "n1_grammar.pdf",
+  "page": 7,
+  "check": false,
+  "pattern": "～にかたくない",
+  "meaning": "~하기에 어렵지 않다, ~하고도 남는다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "親の心配(しんぱい)は、察(さっ)するにかたくない",
+    "ko": "부모의 걱정은 헤아리고도 남는다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～難(むずか)しくない",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "想像·察する·理解+にかたくない 고정",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g118",
+  "no": "118",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～に越したことはない",
+  "meaning": "~하는 것이 제일이다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "自分で解決(かいけつ)するにこしたことはない",
+    "ko": "스스로 해결하는 것이 제일이다"
+   },
+   {
+    "ja": "入学願書(にゅうがくがんしょ)の締(し)め切りは月末(げつまつ)だけれど、早めに出せるならそれにこしたことはない。",
+    "ko": "입학 원서 마감은 월말이지만, 일찌감치 제출할 수 있으면 그것보다 나은 것은 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 71
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～が一番(いちばん)だ",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "당연히 ~하는 편이 좋다는 일반론",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g119",
+  "no": "119",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～まい",
+  "meaning": "~하지 않겠다, ~하지 않을 것이다",
+  "connection": "모든 동사 기본형 + まい (2그룹·3그룹은 ～ない형에도 가능)",
+  "examples": [
+   {
+    "ja": "何があっても諦(あきら)めるまい",
+    "ko": "무슨 일이 있어도 포기하지 않겠다"
+   },
+   {
+    "ja": "明日は雨は降るまい",
+    "ko": "내일은 비는 오지 않을 것이다"
+   },
+   {
+    "ja": "これからは友達(ともだち)と喧嘩(けんか)はするまいと反省(はんせい)した。",
+    "ko": "앞으로는 친구와 싸우지 않겠다고 반성했다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 88
+   },
+   {
+    "ja": "目の前で寿司職人(すししょくにん)さんが作っているのを見たとあれば買うしかあるまい。",
+    "ko": "눈 앞에서 초밥달인이 만들고 있는 것을 봤다면 살 수밖에 없을 것이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 88
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～しかあるまい",
+    "diff": "~할 수밖에 없을 것이다"
+   }
+  ],
+  "point": "부정 의지(~하지 않겠다)와 부정 추측(~하지 않을 것이다) 구분",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g120",
+  "no": "120",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～までもない",
+  "meaning": "~할 필요도 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "タクシーに乗るまでもない",
+    "ko": "택시를 탈 필요도 없다"
+   },
+   {
+    "ja": "戦争(せんそう)がどんなに恐(おそ)ろしい結果(けっか)をもたらすか、今さら言うまでもない。",
+    "ko": "전쟁이 얼마나 무서운 결과를 초래하는지, 새삼스레 말할 필요도 없다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 94
+   },
+   {
+    "ja": "最高(さいこう)にうまいとまでは言わないが、値段(ねだん)を考えれば大満足(だいまんぞく)だ。",
+    "ko": "최고로 맛있다고까지는 할 수 없지만, 가격을 생각하면 대만족이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 94
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とまでは言わないが",
+    "diff": "~라고까지는 할 수 없지만"
+   }
+  ],
+  "point": "言うまでもない·確かめるまでもない. 당연하므로 필요 없음",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g121",
+  "no": "121",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～を禁じえない",
+  "meaning": "~을 금할 수가 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "同情(どうじょう)を禁(きん)じえない",
+    "ko": "동정을 금할 수가 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ずにはいられない",
+    "diff": "자연히 ~하게 됨",
+    "ai": true
+   }
+  ],
+  "point": "同情·涙·怒り·驚き 등 감정 명사+を禁じえない",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g122",
+  "no": "122",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "ただ～のみならず",
+  "meaning": "단지 ~뿐만 아니라",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "ただ勇敢(ゆうかん)であるのみならず",
+    "ko": "단지 용감할 뿐만 아니라"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～だけでなく",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "ただ~のみならず~も 형태",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g123",
+  "no": "123",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "ひとり～のみならず",
+  "meaning": "단지 ~뿐만 아니라",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "ひとり日本のみならず",
+    "ko": "단지 일본뿐만 아니라"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "ただ～のみならず",
+    "diff": "같은 뜻 (122번)",
+    "ai": true
+   }
+  ],
+  "point": "ひとり=단지. 한 개인·한 나라를 넘어선 문제로 확대",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g124",
+  "no": "124",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～ずにはおかない",
+  "meaning": "~하고야 말겠다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "謝(あやま)らせずにはおかない",
+    "ko": "사과하게 하고야 말겠다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "＝～ないではおかない",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   }
+  ],
+  "point": "반드시 ~하겠다는 의지 / 자연히 ~하게 만든다(感動させずにはおかない)",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g125",
+  "no": "125",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～ずにはすまない",
+  "meaning": "~해야 한다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "お見舞(みま)いに行かずにはすまない",
+    "ko": "병문안 가야 한다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "＝～ないではすまない",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   }
+  ],
+  "point": "사회적·도덕적으로 ~하지 않으면 안 된다. する→せずにはすまない",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g126",
+  "no": "126",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～ねばならない",
+  "meaning": "~해야 한다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "指示(しじ)に従(したが)わねばならない",
+    "ko": "지시에 따라야 한다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～なければならない",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "なければならない의 문어체. する→せねばならない",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g127",
+  "no": "127",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～始末だ",
+  "meaning": "~꼴(형편, 지경)이다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "過労(かろう)で倒(たお)れる始末(しまつ)だ",
+    "ko": "과로로 쓰러지는 지경이다"
+   },
+   {
+    "ja": "ああした方がいい、こうした方がいいと大騒(おおさわ)ぎしたあげく、このしまつだ。",
+    "ko": "이렇게 하는 게 낫다, 저렇게 하는 게 낫다며 큰 소란을 피운 끝에 이 모양이다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 26
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～あげく",
+    "diff": "결국 나쁜 결과",
+    "ai": true
+   }
+  ],
+  "point": "나쁜 상황 끝에 결국 이 꼴(この始末だ)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g128",
+  "no": "128",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～ずじまいだ",
+  "meaning": "~하지 못하고 말다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "結局(けっきょく)答えは分からずじまいだった",
+    "ko": "결국 답은 알지 못하고 말았다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ないまま",
+    "diff": "~하지 않은 채",
+    "ai": true
+   }
+  ],
+  "point": "동사 ない형+ずじまい. する→せずじまい. 결국 못 하고 끝남",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g129",
+  "no": "129",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～だけましだ",
+  "meaning": "~만으로도 다행이다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "給料(きゅうりょう)がもらえるだけましだ",
+    "ko": "급여를 받을 수 있는 것만으로도 다행이다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～だけいい",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "나쁜 상황이지만 그나마 다행",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g130",
+  "no": "130",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～まで(のこと)だ",
+  "meaning": "~하면 된다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "日帰(ひがえ)り旅行(りょこう)にするまでだ",
+    "ko": "당일치기 여행으로 하면 된다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～しかない",
+    "diff": "~할 수밖에 없다",
+    "ai": true
+   }
+  ],
+  "point": "다른 방법이 없으면 ~할 뿐이다 / ～たまでだ는 '~했을 뿐이다'",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g131",
+  "no": "131",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～いかん",
+  "meaning": "~여하",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "本人の努力(どりょく)いかんによる",
+    "ko": "본인의 노력 여하에 달려 있다"
+   },
+   {
+    "ja": "事情(じじょう)のいかんによらず",
+    "ko": "사정 여하에 관계없이"
+   },
+   {
+    "ja": "選挙結果(せんきょけっか)のいかんにかかわらず",
+    "ko": "선거 결과 여하에 관계없이"
+   },
+   {
+    "ja": "理由(りゆう)のいかんを問わず",
+    "ko": "이유 여하를 불문하고"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～いかんによらず",
+    "diff": "~여하에 관계없이"
+   },
+   {
+    "pattern": "＝～いかんにかかわらず",
+    "diff": "같은 뜻으로 바꿔 쓸 수 있음"
+   },
+   {
+    "pattern": "～いかんを問わず",
+    "diff": "~여하를 불문하고"
+   }
+  ],
+  "point": "いかんによっては(여하에 따라서는)도 출제",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g132",
+  "no": "132",
+  "src": "n1_grammar.pdf",
+  "page": 8,
+  "check": false,
+  "pattern": "～と～(と)があいまって",
+  "meaning": "~와 ~가 맞물려",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "長期不況(ちょうきふきょう)と晩婚化(ばんこんか)とがあいまって",
+    "ko": "장기 불황과 만혼화가 맞물려"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～と相(あい)まって",
+    "diff": "같은 뜻",
+    "ai": true
+   }
+  ],
+  "point": "두 요인이 합쳐져 더 큰 효과",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g133",
+  "no": "133",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～とあって",
+  "meaning": "~이라서",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "年末(ねんまつ)セールとあって",
+    "ko": "연말 세일이라서"
+   },
+   {
+    "ja": "10年に一度のお祭(まつ)りとあって、村は見物客(けんぶつきゃく)でにぎわった。",
+    "ko": "10년에 한 번 있는 축제라서, 마을은 구경꾼으로 북적였다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 44
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とあっては",
+    "diff": "~이라면"
+   }
+  ],
+  "point": "특별한 상황이라서 당연히 ~하다. 뉴스체",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g134",
+  "no": "134",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～にかかわる",
+  "meaning": "~에 관계되는",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "人の命(いのち)にかかわること",
+    "ko": "사람의 생명과 관계되는 것"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～に関(かん)する",
+    "diff": "관련 일반",
+    "ai": true
+   }
+  ],
+  "point": "命·名誉·将来 등 중대한 것에 영향을 미침",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g135",
+  "no": "135",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～にかこつけて",
+  "meaning": "~을 구실로, ~을 구실 삼아",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "研修(けんしゅう)にかこつけて海外旅行(かいがいりょこう)に行く",
+    "ko": "연수를 구실로 해외 여행을 간다"
+   },
+   {
+    "ja": "上司(じょうし)の留守(るす)をいいことに、彼(かれ)は万事(ばんじ)を思いどおりにした。",
+    "ko": "상사의 부재를 핑계 삼아, 그는 만사를 마음대로 했다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 70
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～(の)をいいことに",
+    "diff": "~을 핑계 삼아"
+   }
+  ],
+  "point": "다른 것을 구실로 삼음(부정적 뉘앙스)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g136",
+  "no": "136",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～にひきかえ",
+  "meaning": "~와는 반대로",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "去年にひきかえ、今年は雨が多い",
+    "ko": "작년과는 반대로 올해는 비가 많이 내린다"
+   },
+   {
+    "ja": "優秀(ゆうしゅう)な成績(せいせき)で大学を卒業(そつぎょう)した兄にひきかえ、弟は遊(あそ)んでばかりだ。",
+    "ko": "우수한 성적으로 대학을 졸업한 형과는 달리 남동생은 놀기만 한다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 78
+   },
+   {
+    "ja": "男は人質(ひとじち)とひきかえに3000万円を要求(ようきゅう)した。",
+    "ko": "남자는 인질과 교환으로 3000만 엔을 요구했다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 78
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～とひきかえに",
+    "diff": "~와 교환으로"
+   },
+   {
+    "pattern": "～に反(はん)して",
+    "diff": "~에 반해서. 期待に反して結果はあまりよくなかった"
+   }
+  ],
+  "point": "두 대상을 대비해 평가",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g137",
+  "no": "137",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～にもまして",
+  "meaning": "~보다 더",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "自分の進学問題(しんがくもんだい)にもまして",
+    "ko": "자신의 진학 문제보다 더"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～以上(いじょう)に",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "何にもまして(무엇보다도)·以前にもまして",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g138",
+  "no": "138",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～をおして",
+  "meaning": "~을 무릅쓰고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "周囲(しゅうい)の反対(はんたい)をおして",
+    "ko": "주위의 반대를 무릅쓰고"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をものともせず",
+    "diff": "어려움에 굴하지 않음",
+    "ai": true
+   }
+  ],
+  "point": "病気をおして·反対をおして. 무리를 무릅씀",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g139",
+  "no": "139",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～をもって",
+  "meaning": "~으로",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "プレゼントの発送(はっそう)をもって",
+    "ko": "선물 발송으로"
+   },
+   {
+    "ja": "これをもってパーティーを終了(しゅうりょう)させていただきます。",
+    "ko": "이것으로 파티를 끝내겠습니다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 109
+   },
+   {
+    "ja": "あなたの実力(じつりょく)をもってすれば、どんなことでもやれると思うよ。",
+    "ko": "당신 실력이라면 어떤 일이든 할 수 있을 거라 생각해.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 109
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をもってすれば",
+    "diff": "~(으)로라면. 능력·수단을 높이 평가"
+   }
+  ],
+  "point": "수단(～で의 격식체)과 기한·시점(本日をもって終了) 두 용법을 구분",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g140",
+  "no": "140",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～をものともせず",
+  "meaning": "~에도 아랑곳하지 않고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "数々(かずかず)の失敗(しっぱい)をものともせず",
+    "ko": "수많은 실패에도 아랑곳하지 않고"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をよそに",
+    "diff": "주위의 걱정을 무시(비판적)",
+    "ai": true
+   }
+  ],
+  "point": "어려움에 굴하지 않는 긍정적 평가",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g141",
+  "no": "141",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～をよそに",
+  "meaning": "~에도 아랑곳하지 않고",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "医者の忠告(ちゅうこく)をよそに",
+    "ko": "의사의 충고에도 아랑곳하지 않고"
+   },
+   {
+    "ja": "住民(じゅうみん)の不安をよそに、原子力発電所(げんしりょくはつでんしょ)の建設(けんせつ)はどんどん進(すす)められた。",
+    "ko": "주민의 불안을 아랑곳하지 않고, 원자력 발전소의 건설은 착착 진행되었다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 111
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～をものともせずに",
+    "diff": "고난, 역경 등에 굴하지 않고"
+   }
+  ],
+  "point": "주위의 걱정·반대를 무시함(비판적)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g142",
+  "no": "142",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～ずくめ",
+  "meaning": "~일색, 온통 ~",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "今年はいいことずくめだった",
+    "ko": "올해는 좋은 일만 가득했다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～まみれ",
+    "diff": "표면에 묻은 것",
+    "ai": true
+   },
+   {
+    "pattern": "～だらけ",
+    "diff": "부정적인 것이 많음",
+    "ai": true
+   }
+  ],
+  "point": "黒ずくめ·いいことずくめ. 좋은 것에도 사용",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g143",
+  "no": "143",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～まみれ",
+  "meaning": "~투성이",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "ほこりまみれだった",
+    "ko": "먼지투성이였다"
+   },
+   {
+    "ja": "うちの弟は、自動車整備工場(じどうしゃせいびこうじょう)で毎日油(あぶら)まみれになって働いている。",
+    "ko": "우리 남동생은 자동차 정비 공장에서 매일 기름투성이가 되어 일하고 있다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 95
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～だらけ",
+    "diff": "부정적 의미. きれいな花だらけ(X), きずだらけ(O)"
+   },
+   {
+    "pattern": "～ずくめ",
+    "diff": "온통, 일색 (142번)"
+   }
+  ],
+  "point": "きずだらけ(O) / きずまみれ(X): まみれ는 땀·피·흙·먼지처럼 표면에 묻는 것에만",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g144",
+  "no": "144",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～めく",
+  "meaning": "~다워지다, ~의 경향을 띠다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "皮肉(ひにく)めいた言い方が気に障(さわ)った",
+    "ko": "비꼬는 듯한 말투가 비위에 거슬렸다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～っぽい",
+    "diff": "구어적",
+    "ai": true
+   }
+  ],
+  "point": "春めく·皮肉めいた. 명사+めく/めいた",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g145",
+  "no": "145",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～べく",
+  "meaning": "~하기 위해",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "問題点(もんだいてん)を改善(かいぜん)すべく",
+    "ko": "문제점을 개선하기 위해"
+   },
+   {
+    "ja": "山田さんは、借金(しゃっきん)を返すべく昼となく夜となく働いている。",
+    "ko": "야마다 씨는 빚을 갚기 위해 밤낮없이 일하고 있다.",
+    "src": "n1_speedgrammer.pdf",
+    "page": 86
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～んがため",
+    "diff": "~하기 위해"
+   },
+   {
+    "pattern": "～べからざる",
+    "diff": "~해서는 안 될, ~할 수 없는"
+   },
+   {
+    "pattern": "～べからず",
+    "diff": "~하지 말 것, ~하지 마시오"
+   },
+   {
+    "pattern": "～べくして",
+    "diff": "당연히 ~할 것이, ~할 수는 있어도"
+   },
+   {
+    "pattern": "～べくもない",
+    "diff": "도저히 ~할 수도 없다"
+   }
+  ],
+  "point": "동사 기본형+べく. する→すべく(するべく)",
+  "point_ai": true,
+  "speed": true
+ },
+ {
+  "id": "g146",
+  "no": "146",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～べくして",
+  "meaning": "~할 만해서",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "落(お)ちるべくして落ちたのだ",
+    "ko": "떨어질 만해서 떨어진 것이다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～べく",
+    "diff": "~하기 위해 (145번)"
+   }
+  ],
+  "point": "起こるべくして起こった: 일어날 만해서 일어났다",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g147",
+  "no": "147",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～べからず",
+  "meaning": "~하지 말 것",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "川には入るべからず",
+    "ko": "강에는 들어가지 말 것"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～べからざる",
+    "diff": "~해서는 안 될 (148번)"
+   }
+  ],
+  "point": "게시판·표어의 금지 문구",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g148",
+  "no": "148",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～べからざる",
+  "meaning": "~해서는 안 될",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "だれが見ても疑(うたが)うべからざる事実(じじつ)",
+    "ko": "누가 봐도 의심해서는 안 될 사실"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～まじき",
+    "diff": "~해서는 안 될 (078번)"
+   }
+  ],
+  "point": "欠くべからざる(없어서는 안 될) 관용구",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g149",
+  "no": "149",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～べくもない",
+  "meaning": "~할 수 없다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "大学合格(だいがくごうかく)など望(のぞ)むべくもない",
+    "ko": "대학 합격 같은 것은 바랄 수 없다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～ようがない",
+    "diff": "방법이 없어 할 수 없다",
+    "ai": true
+   }
+  ],
+  "point": "望むべくもない·知るべくもない",
+  "point_ai": true,
+  "speed": false
+ },
+ {
+  "id": "g150",
+  "no": "150",
+  "src": "n1_grammar.pdf",
+  "page": 9,
+  "check": false,
+  "pattern": "～てしかるべきだ",
+  "meaning": "~해야 마땅하다",
+  "connection": "",
+  "examples": [
+   {
+    "ja": "謝罪(しゃざい)してしかるべきだ",
+    "ko": "사죄해야 마땅하다"
+   }
+  ],
+  "similar": [
+   {
+    "pattern": "～べきだ",
+    "diff": "일상어",
+    "ai": true
+   }
+  ],
+  "point": "당연히 ~해야 마땅하다. 비판·주장",
+  "point_ai": true,
+  "speed": false
+ }
+]

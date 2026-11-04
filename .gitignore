@@ -1,0 +1,4 @@
+*.pdf
+reference.html
+.claude/
+__pycache__/
