@@ -894,12 +894,13 @@
   "id": "w0082",
   "src": "n1_word.pdf",
   "page": 7,
-  "check": false,
+  "check": true,
   "word": "騒然とする",
-  "reading": "そうぜんする",
+  "reading": "そうぜんとする",
   "meaning": "시끄럽다",
   "year": "2023",
-  "part": "한자읽기"
+  "part": "한자읽기",
+  "note": "교재 후리가나 そうぜんする는 と가 빠진 오타라 そうぜんとする로 고침"
  },
  {
   "id": "w0083",

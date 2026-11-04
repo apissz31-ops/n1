@@ -6,6 +6,20 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': 
 const RUBY_SRC = '([\\u4e00-\\u9fff々〆ヶ]+)\\(([\\u3040-\\u309fー]+)\\)';
 const rb = s => esc(s).replace(new RegExp(RUBY_SRC, 'g'), '<ruby>$1<rt>$2</rt></ruby>');
 const noRuby = s => String(s ?? '').replace(new RegExp(RUBY_SRC, 'g'), '$1');
+/* 단어+읽기 → 한자 위 후리가나 HTML (맞출 수 없으면 null). 단어장 화면 전용, 퀴즈에는 쓰지 않음 */
+const KJ_RUN = /[一-鿿々〆ヶ]+|[^一-鿿々〆ヶ]+/g, IS_KJ = /[一-鿿々〆ヶ]/;
+const toHira = s => s.replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60));
+function furi(word, reading) {
+  const w = String(word ?? ''), r = String(reading ?? '').replace(/\s+/g, '');
+  if (!IS_KJ.test(w)) return esc(w);
+  if (!r || r === w || NO_FURI) return null;
+  const segs = w.match(KJ_RUN);
+  const re = new RegExp('^' + segs.map(s => IS_KJ.test(s) ? '(.+?)' : '(' + toHira(s.replace(/\s+/g, '')).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')').join('') + '$');
+  const m = toHira(r).match(re);
+  return m ? segs.map((s, i) => IS_KJ.test(s) ? `<ruby>${esc(s)}<rt>${esc(m[i + 1])}</rt></ruby>` : esc(s)).join('') : null;
+}
+let NO_FURI = false; // 퀴즈 해설을 만들 때 잠깐 켬
+let FURI = true; try { FURI = localStorage.getItem('n1-furi') !== '0'; } catch (e) {}
 const AI = '<i class="tag ai" title="교재에 없는 내용을 AI가 작성">AI</i>';
 
 /* ---------- 날짜 ---------- */
@@ -53,7 +67,9 @@ const choiceForm = v => v.replace(/^[～〜]/, '');
 const GRAMMAR = {
   id: 'grammar', name: '문법', file: 'data/grammar.json', tab: 'grammar',
   label: it => it.pattern, sub: it => it.meaning,
-  meta: it => `<span>No.${esc(it.no)}${it.speed ? '<i class="tag exam">스피드</i>' : ''}</span><span>${srcTag(it)}</span>`,
+  meta: it => it.sno
+    ? `<span>No.${esc(it.no)}<i class="tag exam">스피드 ${esc(it.sno)}</i></span><span>스피드 p.${esc(it.page)}</span>`
+    : `<span>No.${esc(it.no)}${it.speed ? '<i class="tag exam">스피드</i>' : ''}</span><span>${srcTag(it)}</span>`,
   front: (it, v) => `<p class="term">${rb(it.pattern)}</p><div class="hintwrap">${v.hint
     ? `<p class="sub">${it.connection ? '접속: ' + esc(it.connection) : '교재에 접속 정보가 없는 문형이에요'}</p>`
     : '<button class="hintbtn" data-act="hint">접속 힌트</button>'}</div>`,
@@ -65,7 +81,7 @@ const GRAMMAR = {
     if (it.point) h += sec('시험 포인트' + (it.point_ai ? AI : ''), `<p>${esc(it.point)}</p>`);
     return h;
   },
-  text: it => [it.no, it.pattern, it.meaning, it.connection, ...it.examples.map(e => noRuby(e.ja) + ' ' + e.ko), ...(it.similar || []).map(s => s.pattern)].join(' '),
+  text: it => [it.no, it.sno, it.pattern, it.meaning, it.connection, ...it.examples.map(e => noRuby(e.ja) + ' ' + e.ko), ...(it.similar || []).map(s => s.pattern)].join(' '),
   groups: items => chunks(items, 10, it => it.no),
   chips: ['speed'],
   quiz: grammarQuiz,
@@ -78,15 +94,16 @@ const WORDS = {
   meta: it => `<span>${it.year ? esc(it.year) + ' 기출' : ''}${it.part ? `<i class="tag">${esc(it.part)}</i>` : ''}</span><span>${srcTag(it)}</span>`,
   front: (it, v) => v.dir === 'rev'
     ? `<p class="term ko">${esc(it.meaning)}</p><div class="hintwrap"></div>`
-    : `<p class="term">${esc(WORDS.head(it))}</p><div class="hintwrap">${!it.word && it.ai_kanji ? `<p class="sub">교재엔 히라가나만 있어 한자 표기는 ${AI}</p>` : ''}</div>`,
-  back: it => `<p class="term sm">${esc(WORDS.head(it))}</p>${it.reading !== WORDS.head(it) ? `<p class="rd" lang="ja">${esc(it.reading)}</p>` : ''}<p class="def">${esc(it.meaning)}${it.meaning_ai ? ' ' + AI : ''}</p>` +
-    (it.meaning_ai ? '<p class="sub">교재에 뜻이 비어 있어 AI가 채웠어요</p>' : '') + (it.note ? sec('메모', `<p>${esc(it.note)}</p>`) : ''),
+    : `<p class="term" lang="ja">${FURI && furi(WORDS.head(it), it.reading) || esc(WORDS.head(it))}</p><div class="hintwrap">${!it.word && it.ai_kanji ? `<p class="sub">교재엔 히라가나만 있어 한자 표기는 ${AI}</p>` : ''}</div>`,
+  listLabel: it => furi(WORDS.head(it), it.reading),
+  back: it => { const f = furi(WORDS.head(it), it.reading); return `<p class="term sm" lang="ja">${f || esc(WORDS.head(it))}</p>${!f && it.reading !== WORDS.head(it) ? `<p class="rd" lang="ja">${esc(it.reading)}</p>` : ''}<p class="def">${esc(it.meaning)}${it.meaning_ai ? ' ' + AI : ''}</p>` +
+    (it.meaning_ai ? '<p class="sub">교재에 뜻이 비어 있어 AI가 채웠어요</p>' : '') + (it.note ? sec('메모', `<p>${esc(it.note)}</p>`) : ''); },
   text: it => [it.word, it.ai_kanji, it.reading, it.meaning].join(' '),
   groups(items) {
     const ys = [...new Set(items.map(i => i.year).filter(Boolean))].sort().reverse(), ps = [...new Set(items.map(i => i.part).filter(Boolean))];
     return [...ys.map(y => ({ v: 'y' + y, label: '연도 ' + y, f: it => it.year === y })), ...ps.map(p => ({ v: 'p' + p, label: '유형 ' + p, f: it => it.part === p }))];
   },
-  chips: ['dir'],
+  chips: ['dir', 'furi'],
   quiz: meaningQuiz,
 };
 
@@ -99,7 +116,7 @@ const KANJI = {
     let h = `<p class="term sm" lang="ja">${esc(it.kanji)}</p><p class="def">${esc(it.meaning)}</p>`;
     if (it.on && it.on.length) h += sec('음독', `<p class="rd" lang="ja">${esc(it.on.join('・'))}</p>`);
     if (it.kun && it.kun.length) h += sec('훈독', `<p class="rd" lang="ja">${esc(it.kun.join('・'))}</p>`);
-    const row = v => `<span class="ja" lang="ja">${esc(v.word)}</span><span class="r" lang="ja">${esc(v.reading)}</span><span>${esc(v.meaning)}${v.ai ? ' ' + AI : ''}</span>`;
+    const row = v => { const f = furi(v.word, v.reading); return `<span class="ja" lang="ja">${f || esc(v.word)}</span><span class="r" lang="ja">${f ? '' : esc(v.reading)}</span><span>${esc(v.meaning)}${v.ai ? ' ' + AI : ''}</span>`; };
     const main = (it.vocab || []).filter(v => !v.tip), tips = (it.vocab || []).filter(v => v.tip);
     if (main.length) h += sec('어휘', `<div class="vocab">${main.map(row).join('')}</div>`);
     if (tips.length) h += sec('함께 알아두기', `<div class="vocab">${tips.map(row).join('')}</div>`);
@@ -115,16 +132,17 @@ const READING = {
   id: 'reading', name: '읽기 어휘', file: 'data/reading.json', tab: 'kanji',
   label: it => it.word, sub: it => it.meaning,
   meta: it => `<span>핀포인트<i class="tag">${esc(it.part)}</i></span><span>${srcTag(it)}</span>`,
-  front: it => `<p class="term">${esc(it.word)}</p><div class="hintwrap"></div>`,
+  front: it => `<p class="term" lang="ja">${FURI && furi(it.word, it.reading) || esc(it.word)}</p><div class="hintwrap">${FURI && it.reading_ai && furi(it.word, it.reading) ? `<p class="sub">후리가나 ${AI}</p>` : ''}</div>`,
+  listLabel: it => furi(it.word, it.reading),
   back(it) {
-    const pr = it.pair && READING.byId[it.pair];
-    return `<p class="term sm">${esc(it.word)}</p>` + (it.reading !== it.word ? `<p class="rd" lang="ja">${esc(it.reading)}${it.reading_ai ? ' ' + AI : ''}</p>` : '') +
+    const pr = it.pair && READING.byId[it.pair], f = furi(it.word, it.reading);
+    return `<p class="term sm" lang="ja">${f || esc(it.word)}</p>` + (!f && it.reading !== it.word ? `<p class="rd" lang="ja">${esc(it.reading)}${it.reading_ai ? ' ' + AI : ''}</p>` : '') +
       `<p class="def">${esc(it.meaning)}</p>` + (it.reading_ai ? '<p class="sub">교재에 후리가나가 없어 AI가 읽기를 채웠어요</p>' : '') +
-      (pr ? sec('유의어 ≒', `<p><b lang="ja">${esc(pr.word)}</b> <span class="r" lang="ja">${pr.reading !== pr.word ? esc(pr.reading) : ''}</span> — ${esc(pr.meaning)}</p>`) : '');
+      (pr ? sec('유의어 ≒', `<p><b lang="ja">${furi(pr.word, pr.reading) || esc(pr.word)}</b> <span class="r" lang="ja">${pr.reading !== pr.word && !furi(pr.word, pr.reading) ? esc(pr.reading) : ''}</span> — ${esc(pr.meaning)}</p>`) : '');
   },
   text: it => [it.word, it.reading, it.meaning].join(' '),
   groups(items) { const ps = [...new Set(items.map(i => i.part))]; return ps.map(p => ({ v: 'p' + p, label: '유형 ' + p, f: it => it.part === p })); },
-  chips: [],
+  chips: ['furi'],
   quiz: readingQuiz,
 };
 
@@ -232,6 +250,7 @@ function renderPart() {
       <button class="chip warn" data-chip="bad" aria-pressed="${v.bad}">모르는 것만</button>
       ${p.chips.includes('speed') ? `<button class="chip gold" data-chip="speed" aria-pressed="${v.speed}">스피드 문법만</button>` : ''}
       ${p.chips.includes('dir') ? `<button class="chip" data-chip="dir" aria-pressed="${v.dir === 'rev'}">뜻→단어</button>` : ''}
+      ${p.chips.includes('furi') && v.mode === 'card' ? `<button class="chip" data-chip="furi" aria-pressed="${FURI}">후리가나</button>` : ''}
       <button class="chip" data-chip="shuf" aria-pressed="${v.shuf}">섞기</button></div>`;
   }
   el.innerHTML = h + '<div id="body"></div>';
@@ -274,7 +293,7 @@ function fillList(p) {
   const xs = q ? p.items.filter(it => (it._t || (it._t = p.text(it).toLowerCase())).includes(q)) : p.items;
   $('#listBox').innerHTML = (xs.length ? '' : '<div class="empty">검색 결과가 없어요</div>') + xs.slice(0, 400).map(it => {
     const c = rec(it.id);
-    return `<details data-id="${it.id}"><summary><i class="dot ${c ? c.s : ''}"></i><span class="l" lang="ja">${esc(noRuby(p.label(it)))}</span><span class="m">${esc(p.sub(it))}</span><span class="n">${esc(it.no || it.id)}</span></summary><div class="body"></div></details>`;
+    return `<details data-id="${it.id}"><summary><i class="dot ${c ? c.s : ''}"></i><span class="l" lang="ja">${p.listLabel && p.listLabel(it) || esc(noRuby(p.label(it)))}</span><span class="m">${esc(p.sub(it))}</span><span class="n">${esc(it.no || it.id)}</span></summary><div class="body"></div></details>`;
   }).join('') + (xs.length > 400 ? `<p class="note">${xs.length}개 중 400개만 표시 — 검색어를 더 입력하세요</p>` : '');
 }
 
@@ -354,7 +373,8 @@ function grammarQuiz(it) {
 function meaningQuiz(it) {
   const p = partOf(it.id), same = p.items.filter(x => x.id !== it.id && x.part && x.part === it.part).map(x => x.meaning);
   const wr = pickN(same, 3, [it.meaning]); if (wr.length < 3) wr.push(...pickN(p.items.map(x => x.meaning), 3 - wr.length, [it.meaning, ...wr]));
-  return mkQuiz(`<span class="ja" lang="ja">${esc(p.label(it))}</span>`, '뜻으로 알맞은 것은?', it.meaning, wr, p.back(it), false);
+  NO_FURI = true; let ex; try { ex = p.back(it); } finally { NO_FURI = false; }
+  return mkQuiz(`<span class="ja" lang="ja">${esc(p.label(it))}</span>`, '뜻으로 알맞은 것은?', it.meaning, wr, ex, false);
 }
 /* 읽기 함정: 장음·탁음/반탁음·촉음·요음 */
 const DAK = {}; ['かが', 'きぎ', 'くぐ', 'けげ', 'こご', 'さざ', 'しじ', 'すず', 'せぜ', 'そぞ', 'ただ', 'ちぢ', 'つづ', 'てで', 'とど', 'はばぱ', 'ひびぴ', 'ふぶぷ', 'へべぺ', 'ほぼぽ']
@@ -487,6 +507,7 @@ document.addEventListener('click', e => {
   if (!p) return;
   const v = vs(p);
   if (d.mode) { v.mode = d.mode; v.q = null; return renderPart(); }
+  if (d.chip === 'furi') { FURI = !FURI; try { localStorage.setItem('n1-furi', FURI ? '1' : '0'); } catch (e) {} return renderPart(); }
   if (d.chip) { if (d.chip === 'dir') v.dir = v.dir === 'rev' ? 'fw' : 'rev'; else v[d.chip] = !v[d.chip]; if (d.chip !== 'dir') rebuild(p); return renderPart(); }
   if (d.range) { v.range = d.range; rebuild(p); return renderPart(); }
   if (d.rate) return doRate(p, d.rate);
