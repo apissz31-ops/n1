@@ -75,15 +75,16 @@ const WORDS = {
   id: 'words', name: '단어', file: 'data/words.json', tab: 'words',
   head: it => it.word || it.ai_kanji || it.reading,
   label: it => WORDS.head(it), sub: it => it.meaning,
-  meta: it => `<span>${it.year ? esc(it.year) : ''}${it.part ? `<i class="tag">${esc(it.part)}</i>` : ''}</span><span>${srcTag(it)}</span>`,
+  meta: it => `<span>${it.year ? esc(it.year) + ' 기출' : ''}${it.part ? `<i class="tag">${esc(it.part)}</i>` : ''}</span><span>${srcTag(it)}</span>`,
   front: (it, v) => v.dir === 'rev'
     ? `<p class="term ko">${esc(it.meaning)}</p><div class="hintwrap"></div>`
     : `<p class="term">${esc(WORDS.head(it))}</p><div class="hintwrap">${!it.word && it.ai_kanji ? `<p class="sub">교재엔 히라가나만 있어 한자 표기는 ${AI}</p>` : ''}</div>`,
-  back: it => `<p class="term sm">${esc(WORDS.head(it))}</p><p class="rd" lang="ja">${esc(it.reading)}</p><p class="def">${esc(it.meaning)}</p>`,
+  back: it => `<p class="term sm">${esc(WORDS.head(it))}</p>${it.reading !== WORDS.head(it) ? `<p class="rd" lang="ja">${esc(it.reading)}</p>` : ''}<p class="def">${esc(it.meaning)}${it.meaning_ai ? ' ' + AI : ''}</p>` +
+    (it.meaning_ai ? '<p class="sub">교재에 뜻이 비어 있어 AI가 채웠어요</p>' : '') + (it.note ? sec('메모', `<p>${esc(it.note)}</p>`) : ''),
   text: it => [it.word, it.ai_kanji, it.reading, it.meaning].join(' '),
   groups(items) {
-    const ys = [...new Set(items.map(i => i.year).filter(Boolean))].sort(), ps = [...new Set(items.map(i => i.part).filter(Boolean))];
-    return [...ys.map(y => ({ v: 'y' + y, label: '연도 ' + y, f: it => it.year === y })), ...ps.map(p => ({ v: 'p' + p, label: '품사 ' + p, f: it => it.part === p }))];
+    const ys = [...new Set(items.map(i => i.year).filter(Boolean))].sort().reverse(), ps = [...new Set(items.map(i => i.part).filter(Boolean))];
+    return [...ys.map(y => ({ v: 'y' + y, label: '연도 ' + y, f: it => it.year === y })), ...ps.map(p => ({ v: 'p' + p, label: '유형 ' + p, f: it => it.part === p }))];
   },
   chips: ['dir'],
   quiz: meaningQuiz,
