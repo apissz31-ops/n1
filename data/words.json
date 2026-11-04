@@ -4072,12 +4072,13 @@
   "id": "w0370",
   "src": "n1_word.pdf",
   "page": 27,
-  "check": false,
+  "check": true,
   "word": "粘り強く",
-  "reading": "ねはりづよく",
+  "reading": "ねばりづよく",
   "meaning": "끈기 있게",
   "year": "2017",
-  "part": "교체유의어"
+  "part": "교체유의어",
+  "note": "교재 후리가나 ねはりづよく는 오타라 ねばりづよく로 고침"
  },
  {
   "id": "w0371",

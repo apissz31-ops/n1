@@ -99,7 +99,10 @@ const KANJI = {
     let h = `<p class="term sm" lang="ja">${esc(it.kanji)}</p><p class="def">${esc(it.meaning)}</p>`;
     if (it.on && it.on.length) h += sec('음독', `<p class="rd" lang="ja">${esc(it.on.join('・'))}</p>`);
     if (it.kun && it.kun.length) h += sec('훈독', `<p class="rd" lang="ja">${esc(it.kun.join('・'))}</p>`);
-    if (it.vocab && it.vocab.length) h += sec('어휘', `<div class="vocab">${it.vocab.map(v => `<span class="ja" lang="ja">${esc(v.word)}</span><span class="r" lang="ja">${esc(v.reading)}</span><span>${esc(v.meaning)}</span>`).join('')}</div>`);
+    const row = v => `<span class="ja" lang="ja">${esc(v.word)}</span><span class="r" lang="ja">${esc(v.reading)}</span><span>${esc(v.meaning)}${v.ai ? ' ' + AI : ''}</span>`;
+    const main = (it.vocab || []).filter(v => !v.tip), tips = (it.vocab || []).filter(v => v.tip);
+    if (main.length) h += sec('어휘', `<div class="vocab">${main.map(row).join('')}</div>`);
+    if (tips.length) h += sec('함께 알아두기', `<div class="vocab">${tips.map(row).join('')}</div>`);
     return h;
   },
   text: it => [it.kanji, it.meaning, ...(it.on || []), ...(it.kun || []), ...(it.vocab || []).map(v => v.word + ' ' + v.reading + ' ' + v.meaning)].join(' '),
@@ -111,11 +114,16 @@ const KANJI = {
 const READING = {
   id: 'reading', name: '읽기 어휘', file: 'data/reading.json', tab: 'kanji',
   label: it => it.word, sub: it => it.meaning,
-  meta: it => `<span>${esc(it.id)}</span><span>${srcTag(it)}</span>`,
+  meta: it => `<span>핀포인트<i class="tag">${esc(it.part)}</i></span><span>${srcTag(it)}</span>`,
   front: it => `<p class="term">${esc(it.word)}</p><div class="hintwrap"></div>`,
-  back: it => `<p class="term sm">${esc(it.word)}</p><p class="rd" lang="ja">${esc(it.reading)}</p><p class="def">${esc(it.meaning)}</p>`,
+  back(it) {
+    const pr = it.pair && READING.byId[it.pair];
+    return `<p class="term sm">${esc(it.word)}</p>` + (it.reading !== it.word ? `<p class="rd" lang="ja">${esc(it.reading)}${it.reading_ai ? ' ' + AI : ''}</p>` : '') +
+      `<p class="def">${esc(it.meaning)}</p>` + (it.reading_ai ? '<p class="sub">교재에 후리가나가 없어 AI가 읽기를 채웠어요</p>' : '') +
+      (pr ? sec('유의어 ≒', `<p><b lang="ja">${esc(pr.word)}</b> <span class="r" lang="ja">${pr.reading !== pr.word ? esc(pr.reading) : ''}</span> — ${esc(pr.meaning)}</p>`) : '');
+  },
   text: it => [it.word, it.reading, it.meaning].join(' '),
-  groups: items => chunks(items, 50, it => it.id.slice(1)),
+  groups(items) { const ps = [...new Set(items.map(i => i.part))]; return ps.map(p => ({ v: 'p' + p, label: '유형 ' + p, f: it => it.part === p })); },
   chips: [],
   quiz: readingQuiz,
 };
@@ -368,7 +376,8 @@ function readingTraps(r) {
 function readingQuiz(it) {
   const p = partOf(it.id);
   let w = it;
-  if (p.id === 'kanji') { const vv = (it.vocab || []).filter(v => v.reading); if (!vv.length) return meaningQuiz(it); w = vv[Math.random() * vv.length | 0]; }
+  if (p.id === 'kanji') { const vv = (it.vocab || []).filter(v => v.reading && !v.ai && !/・/.test(v.reading) && v.word.includes(it.kanji)); if (!vv.length) return meaningQuiz(it); w = vv[Math.random() * vv.length | 0]; }
+  else if (w.reading === w.word) return meaningQuiz(it);
   const others = p.id === 'kanji' ? p.items.flatMap(x => (x.vocab || []).map(v => v.reading)) : p.items.map(x => x.reading);
   let wr = pickN(readingTraps(w.reading), 3, [w.reading]);
   if (wr.length < 3) wr.push(...pickN(others, 3 - wr.length, [w.reading, ...wr]));
