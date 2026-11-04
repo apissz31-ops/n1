@@ -67,9 +67,7 @@ const choiceForm = v => v.replace(/^[～〜]/, '');
 const GRAMMAR = {
   id: 'grammar', name: '문법', file: 'data/grammar.json', tab: 'grammar',
   label: it => it.pattern, sub: it => it.meaning,
-  meta: it => it.sno
-    ? `<span>No.${esc(it.no)}<i class="tag exam">스피드 ${esc(it.sno)}</i></span><span>스피드 p.${esc(it.page)}</span>`
-    : `<span>No.${esc(it.no)}${it.speed ? '<i class="tag exam">스피드</i>' : ''}</span><span>${srcTag(it)}</span>`,
+  meta: it => `<span>No.${esc(it.no)}${it.sno ? `<i class="tag exam">스피드 ${esc(it.sno)}</i>` : ''}</span><span>${it.src === 'n1_speedgrammer.pdf' ? '스피드 p.' + esc(it.page) : srcTag(it)}</span>`,
   front: (it, v) => `<p class="term">${rb(it.pattern)}</p><div class="hintwrap">${v.hint
     ? `<p class="sub">${it.connection ? '접속: ' + esc(it.connection) : '교재에 접속 정보가 없는 문형이에요'}</p>`
     : '<button class="hintbtn" data-act="hint">접속 힌트</button>'}</div>`,
