@@ -347,8 +347,7 @@
   "word": "壮大な",
   "reading": "そうだいな",
   "meaning": "장대한",
-  "part": "문맥규정",
-  "reading_ai": true
+  "part": "문맥규정"
  },
  {
   "id": "r036",
@@ -388,8 +387,7 @@
   "word": "従事",
   "reading": "じゅうじ",
   "meaning": "종사",
-  "part": "문맥규정",
-  "reading_ai": true
+  "part": "문맥규정"
  },
  {
   "id": "r040",
@@ -450,8 +448,7 @@
   "word": "歴然としている",
   "reading": "れきぜんとしている",
   "meaning": "뚜렷하다",
-  "part": "문맥규정",
-  "reading_ai": true
+  "part": "문맥규정"
  },
  {
   "id": "r046",
@@ -512,8 +509,7 @@
   "word": "逸脱する",
   "reading": "いつだつする",
   "meaning": "벗어나다",
-  "part": "문맥규정",
-  "reading_ai": true
+  "part": "문맥규정"
  },
  {
   "id": "r052",
@@ -841,7 +837,6 @@
   "reading": "うちこんだ",
   "meaning": "몰두했다",
   "part": "유의어",
-  "reading_ai": true,
   "pair": "r081"
  },
  {
@@ -864,7 +859,6 @@
   "reading": "ぎんみする",
   "meaning": "음미하다, 검토하다",
   "part": "유의어",
-  "reading_ai": true,
   "pair": "r083"
  },
  {
@@ -1291,8 +1285,7 @@
   "word": "繁盛する",
   "reading": "はんじょうする",
   "meaning": "번창하다",
-  "part": "용법",
-  "reading_ai": true
+  "part": "용법"
  },
  {
   "id": "r122",
@@ -1302,8 +1295,7 @@
   "word": "互角",
   "reading": "ごかく",
   "meaning": "호각, 막상막하",
-  "part": "용법",
-  "reading_ai": true
+  "part": "용법"
  },
  {
   "id": "r123",
