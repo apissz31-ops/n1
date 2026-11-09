@@ -1,7 +1,7 @@
 {
-  "name": "N1 암기장",
-  "short_name": "N1 암기장",
-  "description": "JLPT N1 문법·단어·한자 암기",
+  "name": "N1 문법 퀴즈",
+  "short_name": "N1 문법",
+  "description": "JLPT N1 문법 4지선다 퀴즈",
   "lang": "ko",
   "start_url": "./",
   "scope": "./",

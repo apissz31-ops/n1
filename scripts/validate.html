@@ -1,0 +1,17 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>validate</title>
+<pre id="out">검증 중…</pre>
+<script src="validate.js"></script>
+<script>
+(async () => {
+  const p = new URLSearchParams(location.search), grammar = await (await fetch('../data/grammar.json', { cache: 'no-store' })).json();
+  const days = (p.get('day') || '1').split(',').map(Number), out = [];
+  for (const d of days) {
+    const r = await fetch(`../data/questions/day${String(d).padStart(2, '0')}.json`, { cache: 'no-store' });
+    if (!r.ok) { out.push(`Day ${d}: 파일 없음`); continue; }
+    out.push(N1Validate.report(N1Validate.validateDay(d, grammar, await r.json())));
+  }
+  document.getElementById('out').textContent = out.join('\n\n');
+})();
+</script>

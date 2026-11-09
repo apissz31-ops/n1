@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>N1 암기장</title>
-<meta name="description" content="JLPT N1 문법·단어·한자 암기 앱">
+<title>N1 문법 퀴즈</title>
+<meta name="description" content="JLPT N1 문법 4지선다 퀴즈 · 하루 20문법 200문제">
 <meta name="theme-color" content="#23366e">
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="N1 암기장">
+<meta name="apple-mobile-web-app-title" content="N1 문법">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&family=Noto+Serif+JP:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -19,20 +19,17 @@
 </head>
 <body>
 <div class="wrap">
-<header>
-  <div class="top"><h1>N1 암기장</h1><span class="dday" id="dday"></span></div>
+<header id="hdr">
+  <div class="top"><h1>N1 문법 퀴즈</h1><span class="dday" id="dday"></span></div>
   <nav role="tablist" id="tabs">
     <button role="tab" aria-selected="true" data-tab="home">홈</button>
-    <button role="tab" aria-selected="false" data-tab="grammar">문법</button>
-    <button role="tab" aria-selected="false" data-tab="words">단어</button>
-    <button role="tab" aria-selected="false" data-tab="kanji">한자</button>
     <button role="tab" aria-selected="false" data-tab="wrong">오답</button>
+    <button role="tab" aria-selected="false" data-tab="settings">설정</button>
   </nav>
 </header>
-<main id="p-home"></main>
-<main id="p-part" hidden></main>
-<main id="p-wrong" hidden></main>
+<main id="view"></main>
 </div>
+<div id="modal" class="modal" hidden></div>
 <script src="app.js"></script>
 </body>
 </html>

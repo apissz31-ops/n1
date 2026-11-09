@@ -2,3 +2,5 @@
 reference.html
 .claude/
 __pycache__/
+PROMPT*.md
+step*.md
