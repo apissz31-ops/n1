@@ -1,7 +1,7 @@
 'use strict';
 /* N1 문법 퀴즈 — Day별 200문제 본 풀이 → 오답 라운드(전부 맞힐 때까지) → 완료 폭죽.
    저장: localStorage 키 하나(KEY). 데이터: data/grammar.json, data/questions/dayNN.json */
-const KEY = 'n1quiz.v1', EXAM = '2026-12-06', START = '2026-11-09', NDAYS = 10;
+const KEY = 'n1quiz.v1', EXAM = '2026-12-06', START = '2026-11-09', NDAYS = 12;
 const CONFETTI = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js';
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -104,7 +104,7 @@ function renderHome() {
     <button class="btn primary big" id="go" ${next ? '' : 'disabled'}>${next ? `오늘 이어서 풀기 · Day ${next}` : AVAIL.length < NDAYS ? `Day ${AVAIL.length + 1} 준비 중` : '모든 Day 완료!'}</button>
     <button class="btn no" id="rv" ${nw ? '' : 'disabled'}>오답 다시 풀기 (${nw}개)</button>
   </div>
-  <h3 class="sec">Day 1~10 <span>하루 20문법 · 200문제</span></h3>
+  <h3 class="sec">Day 1~12 <span>하루 20문법 · 200문제</span></h3>
   <div class="tiles">${tiles.join('')}</div>
   <p class="note">Day를 끝까지 풀면 그 Day의 틀린 문제로 오답 라운드가 이어지고, 전부 맞히면 완료됩니다.</p>`;
   $('#go').onclick = () => next && openDay(next);
