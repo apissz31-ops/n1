@@ -73,10 +73,11 @@ function ask(html, btns) {
   });
 }
 function applyTheme() { if (S.theme === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.dataset.theme = S.theme; }
+let TAB = 'home';
 function setTab(tab) {
-  R = null; $('#hdr').hidden = false;
+  R = null; TAB = tab; $('#hdr').hidden = false;
   $$('#tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === tab));
-  ({ home: renderHome, wrong: renderWrong, settings: renderSettings })[tab]();
+  ({ home: renderHome, list: renderList, wrong: renderWrong, settings: renderSettings })[tab]();
   scrollTo(0, 0);
 }
 
@@ -160,7 +161,7 @@ async function startReview(ids, thenDay) {
 }
 async function startGrammar(gid) {
   const g = GM[gid]; await loadDay(g.day);
-  startList({ mode: 'grammar', day: g.day, gid, list: QS[g.day].filter(q => q.gid === gid).map(q => q.id), i: 0 });
+  startList({ mode: 'grammar', day: g.day, gid, from: TAB, list: QS[g.day].filter(q => q.gid === gid).map(q => q.id), i: 0 });
 }
 function startList(sess) {
   R = Object.assign({ picked: null }, sess);
@@ -274,7 +275,7 @@ function finishList() {
     toast('오답을 모두 해결했어요!');
     return R.then ? startMain(R.then) : setTab('home');
   }
-  if (m === 'grammar') { toast('이 문법 10문제를 다 풀었어요'); return setTab('wrong'); }
+  if (m === 'grammar') { toast('이 문법 10문제를 다 풀었어요'); return setTab(R.from || 'wrong'); }
   toast(`Day ${d} 연습 끝!`); setTab('home');
 }
 function completeDay(d) {
@@ -345,6 +346,50 @@ function renderWrong() {
   }).join('')}</ol>` : '<p class="empty">아직 틀린 문제가 없어요.</p>'}`;
   $('#rv').onclick = () => startReview();
   $$('.rank button').forEach(b => b.onclick = () => startGrammar(b.dataset.g));
+}
+
+/* ---------- 문법 목록 ---------- */
+const LF = { q: '', day: 0, open: null };
+const norm = s => String(s || '').toLowerCase().replace(/[～〜~\s・／/]/g, '');
+function gStats(g) {
+  let n = 0, ok = 0, w = 0;
+  for (let i = 1; i <= 10; i++) { const a = S.ans[`${g.id}-${String(i).padStart(2, '0')}`]; if (a) { w += a.w || 0; if (a.first !== undefined) { n++; if (a.first) ok++; } } }
+  return { n, ok, w, un: S.wrong.filter(id => id.startsWith(g.id + '-')).length };
+}
+function renderList() {
+  const days = [...new Set(G.map(g => g.day))];
+  $('#view').innerHTML = `
+  <div class="lsearch"><input type="search" id="lq" placeholder="문형·뜻 검색 (예: 早いか, 하자마자)" value="${esc(LF.q)}" aria-label="문법 검색" autocomplete="off"></div>
+  <div class="dchips" role="group" aria-label="Day 선택">
+    <button class="chip" data-d="0" aria-pressed="${LF.day === 0}">전체</button>
+    ${days.map(d => `<button class="chip" data-d="${d}" aria-pressed="${LF.day === d}">Day ${d}</button>`).join('')}
+  </div>
+  <h3 class="sec" id="lcnt"></h3>
+  <div class="glist" id="gl"></div>`;
+  const draw = () => {
+    const q = norm(LF.q);
+    const rows = G.filter(g => (!LF.day || g.day === LF.day) && (!q || norm(g.pattern + g.meaning + g.connection).includes(q)));
+    $('#lcnt').innerHTML = `${LF.day ? `Day ${LF.day}` : '전체 문법'} <span>${rows.length}개 · 누르면 설명과 다시 풀기</span>`;
+    $('#gl').innerHTML = rows.length ? rows.map(g => {
+      const s = gStats(g), no = +g.id.slice(1);
+      return `<details data-g="${g.id}"${LF.open === g.id ? ' open' : ''}>
+        <summary><span class="no">${no}</span><span class="t"><b class="ja" lang="ja">${esc(g.pattern)}</b><small>${esc(g.meaning)}</small></span>
+          <span class="c"><small>Day ${g.day}</small>${s.n ? `<small>${s.ok}/${s.n}</small>` : ''}${s.un ? `<em class="un">오답 ${s.un}</em>` : ''}</span></summary>
+        <div class="gbody">
+          <p class="sub">접속: ${esc(g.connection)}</p>
+          ${g.explain ? `<p>${esc(g.explain)}</p>` : ''}
+          <p class="meta">${(g.src || []).map(x => `<span class="tag">${{ shadow: '쉐도잉', book: '교재', speed: '스피드' }[x] || esc(x)}</span>`).join('')}${s.w ? `<span>누적 오답 ${s.w}회</span>` : ''}</p>
+          <button class="btn primary" data-play="${g.id}"${AVAIL.includes(g.day) ? '' : ' disabled'}>이 문법 10문제 풀기</button>
+        </div></details>`;
+    }).join('') : '<p class="empty">맞는 문법이 없어요.</p>';
+    $$('#gl details').forEach(d => d.ontoggle = () => { if (d.open) { LF.open = d.dataset.g; $$('#gl details[open]').forEach(o => o !== d && (o.open = false)); } else if (LF.open === d.dataset.g) LF.open = null; });
+    $$('#gl [data-play]').forEach(b => b.onclick = () => startGrammar(b.dataset.play));
+  };
+  $('#lq').oninput = e => { LF.q = e.target.value; draw(); };
+  $$('.dchips .chip').forEach(b => b.onclick = () => {
+    LF.day = +b.dataset.d; $$('.dchips .chip').forEach(c => c.setAttribute('aria-pressed', c === b)); draw();
+  });
+  draw();
 }
 
 /* ---------- 설정 ---------- */

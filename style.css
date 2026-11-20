@@ -154,3 +154,29 @@ h3.sec span{font-family:var(--f-body);font-weight:400;font-size:.8rem;color:var(
 @keyframes fall{to{transform:translateY(110vh) rotate(var(--r))}}
 @media (max-width:420px){.hero .big{font-size:2.2rem}.qstem{font-size:1.12rem}.choice{font-size:1.04rem}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* 문법 목록 */
+.lsearch{margin-top:14px}
+.lsearch input{width:100%;font:500 1rem var(--f-body);padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.lsearch input:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.dchips{display:flex;gap:6px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.dchips::-webkit-scrollbar{display:none}
+.dchips .chip{flex:none}
+.glist{display:flex;flex-direction:column;gap:6px}
+.glist details{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.glist details[open]{border-color:var(--indigo)}
+.glist summary{display:grid;grid-template-columns:2.2em 1fr auto;gap:10px;align-items:center;padding:10px 12px;cursor:pointer;list-style:none}
+.glist summary::-webkit-details-marker{display:none}
+.glist summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:10px}
+.glist .no{font-family:var(--f-mono);font-size:.8rem;color:var(--muted);text-align:center}
+.glist .t{display:flex;flex-direction:column;min-width:0}
+.glist .t b{font-size:1.05rem}
+.glist .t small{color:var(--muted);font-size:.8rem}
+.glist .c{display:flex;flex-direction:column;align-items:flex-end;white-space:nowrap;font-family:var(--f-mono);font-size:.74rem;color:var(--muted)}
+.glist .c small{font-size:inherit}
+.glist .un{font-style:normal;color:var(--bad)}
+.gbody{padding:0 12px 12px;border-top:1px solid var(--line)}
+.gbody p{margin:10px 0 0;font-size:.92rem}
+.gbody .sub{color:var(--muted);font-size:.85rem}
+.gbody .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.78rem;color:var(--muted)}
+.gbody .btn{width:100%;margin-top:12px}
