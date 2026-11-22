@@ -180,3 +180,21 @@ h3.sec span{font-family:var(--f-body);font-weight:400;font-size:.8rem;color:var(
 .gbody .sub{color:var(--muted);font-size:.85rem}
 .gbody .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.78rem;color:var(--muted)}
 .gbody .btn{width:100%;margin-top:12px}
+
+/* 한자 읽기 */
+.kprompt{margin:0;font-size:.8rem;color:var(--muted)}
+.kq{font-size:2.3rem;font-weight:800;line-height:1.4;margin:6px 0 18px;text-align:center;letter-spacing:.04em;word-break:keep-all}
+.kq.sent{font-size:1.3rem;text-align:left;letter-spacing:0;line-height:1.9}
+.kfocus{text-decoration-color:var(--indigo);text-decoration-thickness:2px;text-underline-offset:5px}
+.key .kw{font-weight:800;font-size:1.12rem;color:var(--indigo)}
+.key .kr{font-weight:700;margin:0 4px}
+.kl,.kv,.kwl{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
+.kl .kc{font-size:1.15rem;color:var(--indigo);margin-right:2px}
+.kv li{font-size:.92rem}
+.kv .sub,.kwl .sub{display:inline;margin:0 4px}
+.kwl li{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 6px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.kwl em{margin-left:auto;font-style:normal;font-family:var(--f-mono);font-size:.78rem;color:var(--bad)}
+.glist .kbig{font-size:1.5rem;line-height:1.2}
+.wseg{grid-template-columns:1fr 1fr;margin-top:14px}
+.ktiles{margin-top:8px}
+@media (max-width:420px){.kq{font-size:2rem}.kq.sent{font-size:1.15rem}}

@@ -1,0 +1,14 @@
+<!doctype html>
+<meta charset="utf-8"><title>한자 데이터 검증</title>
+<style>body{font:14px/1.5 monospace;padding:16px;white-space:pre-wrap}</style>
+<body><pre id="out">검증 중…</pre>
+<script src="validate-kanji.js"></script>
+<script>
+(async () => {
+  const get = p => fetch('../' + p, { cache: 'no-cache' }).then(r => r.json());
+  const [kanji, vocab, idx] = await Promise.all([get('data/kanji.json'), get('data/kanji_vocab.json'), get('data/kanji_q/index.json')]);
+  const V = window.N1KanjiValidate, out = [V.report(V.validateData(kanji, vocab))];
+  for (const d of Object.keys(idx).map(Number)) out.push(V.report(V.validateDay(d, kanji, vocab, await get(`data/kanji_q/day${String(d).padStart(2, '0')}.json`))));
+  document.getElementById('out').textContent = out.join('\n\n');
+})();
+</script>

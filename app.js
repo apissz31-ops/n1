@@ -1,6 +1,7 @@
 'use strict';
 /* N1 문법 퀴즈 — Day별 200문제 본 풀이 → 오답 라운드(전부 맞힐 때까지) → 완료 폭죽.
-   저장: localStorage 키 하나(KEY). 데이터: data/grammar.json, data/questions/dayNN.json */
+   저장: localStorage 키 하나(KEY). 데이터: data/grammar.json, data/questions/dayNN.json
+   한자 읽기 퀴즈는 kanji.js (진도는 같은 키의 S.kanji) */
 const KEY = 'n1quiz.v1', EXAM = '2026-12-06', START = '2026-11-09', NDAYS = 12;
 const CONFETTI = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js';
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -23,6 +24,12 @@ function normalize() {
   if (!S || typeof S !== 'object' || Array.isArray(S)) S = {};
   S.ans = S.ans || {}; S.wrong = Array.isArray(S.wrong) ? S.wrong : []; S.days = S.days || {};
   S.shuffle = !!S.shuffle; S.showG = !!S.showG; S.theme = S.theme || 'auto';
+  /* 한자 진도(kanji.js): 없거나 깨진 저장본이면 빈 진도로 시작 */
+  const k = S.kanji && typeof S.kanji === 'object' && !Array.isArray(S.kanji) ? S.kanji : {};
+  k.ans = k.ans && typeof k.ans === 'object' && !Array.isArray(k.ans) ? k.ans : {};
+  k.wrong = Array.isArray(k.wrong) ? k.wrong : [];
+  k.days = k.days && typeof k.days === 'object' && !Array.isArray(k.days) ? k.days : {};
+  S.kanji = k;
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { toast('저장하지 못했어요. 브라우저 저장 공간을 확인하세요.'); } }
 const ds = d => (S.days[d] = S.days[d] || { pos: 0, main: false, done: false, round: 0, order: null });
@@ -77,7 +84,7 @@ let TAB = 'home';
 function setTab(tab) {
   R = null; TAB = tab; $('#hdr').hidden = false;
   $$('#tabs button').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === tab));
-  ({ home: renderHome, list: renderList, wrong: renderWrong, settings: renderSettings })[tab]();
+  ({ home: renderHome, list: renderList, kanji: renderKanjiList, wrong: renderWrong, settings: renderSettings })[tab]();
   scrollTo(0, 0);
 }
 
@@ -107,10 +114,12 @@ function renderHome() {
   </div>
   <h3 class="sec">Day 1~12 <span>하루 20문법 · 200문제</span></h3>
   <div class="tiles">${tiles.join('')}</div>
-  <p class="note">Day를 끝까지 풀면 그 Day의 틀린 문제로 오답 라운드가 이어지고, 전부 맞히면 완료됩니다.</p>`;
+  <p class="note">Day를 끝까지 풀면 그 Day의 틀린 문제로 오답 라운드가 이어지고, 전부 맞히면 완료됩니다.</p>
+  ${kHomeHTML()}`;
   $('#go').onclick = () => next && openDay(next);
   $('#rv').onclick = () => startReview();
-  $$('.tile').forEach(b => b.onclick = () => openDay(+b.dataset.day));
+  $$('.tile[data-day]').forEach(b => b.onclick = () => openDay(+b.dataset.day));
+  kBindHome();
 }
 
 /* ---------- 흐름 ---------- */
@@ -335,9 +344,18 @@ function cssConfetti() {
 }
 
 /* ---------- 오답 탭 ---------- */
+let WT = 'g';
 function renderWrong() {
-  const rows = topWrong(G, 999), nw = S.wrong.length;
   $('#view').innerHTML = `
+  <div class="seg wseg" role="group" aria-label="오답 종류"><button data-wt="g" aria-pressed="${WT === 'g'}">문법 오답 (${S.wrong.length})</button><button data-wt="k" aria-pressed="${WT === 'k'}">한자 오답 (${S.kanji.wrong.length})</button></div>
+  <div id="wbox"></div>`;
+  $$('[data-wt]').forEach(b => b.onclick = () => { WT = b.dataset.wt; renderWrong(); });
+  if (WT === 'k') return renderKanjiWrong($('#wbox'));
+  renderGrammarWrong($('#wbox'));
+}
+function renderGrammarWrong(box) {
+  const rows = topWrong(G, 999), nw = S.wrong.length;
+  box.innerHTML = `
   <div class="homebtns"><button class="btn no" id="rv" ${nw ? '' : 'disabled'}>오답 다시 풀기 (${nw}개)</button></div>
   <h3 class="sec">많이 틀린 문법 TOP <span>누르면 그 문법 10문제를 다시 풉니다</span></h3>
   ${rows.length ? `<ol class="rank">${rows.map((x, i) => {
@@ -405,7 +423,8 @@ function renderSettings() {
   </div>
   <p class="note">다른 기기로 옮길 때는 내보낸 파일을 그 기기에서 불러오세요. 불러오면 지금 기록을 덮어씁니다.</p>
   <h3 class="sec">자료</h3>
-  <p class="note">문법 ${G.length}개 · 예문 출처: 쉐도잉 일본어 문법·문형마스터 N1, 스피드 문법(보강), AI 작성 예문(표시됨).</p>`;
+  <p class="note">문법 ${G.length}개 · 예문 출처: 쉐도잉 일본어 문법·문형마스터 N1, 스피드 문법(보강), AI 작성 예문(표시됨).</p>
+  <p class="note">한자 ${KJ.length}자 · 어휘 ${KV.length}개 · 출처: 2주 완성 JLPT 한자 어휘 자료집 N1. 오답 선지와 해설은 AI 작성.</p>`;
   $$('[data-th]').forEach(b => b.onclick = () => { S.theme = b.dataset.th; save(); applyTheme(); renderSettings(); });
   $('#ex').onclick = () => {
     const blob = new Blob([JSON.stringify(S, null, 1)], { type: 'application/json' }), a = document.createElement('a');
@@ -417,7 +436,7 @@ function renderSettings() {
     const f = e.target.files[0]; if (!f) return;
     try {
       const o = JSON.parse(await f.text());
-      if (!o || typeof o !== 'object' || !o.ans || !o.days) throw new Error('형식');
+      if (!o || typeof o !== 'object' || !((o.ans && o.days) || o.kanji)) throw new Error('형식');
       const v = await ask('<h3>진도 불러오기</h3><p>지금 기록을 이 파일 내용으로 바꿀까요?</p>', [{ label: '불러오기', value: 1, cls: 'primary' }, { label: '취소', value: 0 }]);
       if (!v) return;
       S = o; normalize(); save(); applyTheme(); toast('불러왔어요'); setTab('home');
@@ -425,18 +444,21 @@ function renderSettings() {
     e.target.value = '';
   };
   $('#rs').onclick = async () => {
-    const v = await ask('<h3>초기화</h3><p>모든 풀이 기록과 오답 목록이 지워지고 되돌릴 수 없어요. 먼저 내보내기를 해 두는 걸 권해요.</p>', [{ label: '모두 지우기', value: 1, cls: 'no' }, { label: '취소', value: 0 }]);
+    const v = await ask('<h3>초기화</h3><p>고른 쪽의 풀이 기록과 오답 목록이 지워지고 되돌릴 수 없어요. 먼저 내보내기를 해 두는 걸 권해요.</p>',
+      [{ label: '문법만 지우기', value: 'g', cls: 'no' }, { label: '한자만 지우기', value: 'k', cls: 'no' }, { label: '전체 지우기', value: 'all', cls: 'no' }, { label: '취소', value: 0 }]);
     if (!v) return;
-    try { localStorage.removeItem(KEY); } catch (er) { }
-    load(); applyTheme(); toast('초기화했어요'); setTab('home');
+    if (v === 'all') { try { localStorage.removeItem(KEY); } catch (er) { } load(); }
+    else if (v === 'g') { S = { kanji: S.kanji, theme: S.theme }; normalize(); save(); }
+    else { S.kanji = {}; normalize(); save(); }
+    applyTheme(); toast({ g: '문법 진도를 초기화했어요', k: '한자 진도를 초기화했어요', all: '전체를 초기화했어요' }[v]); setTab('home');
   };
 }
 
 /* ---------- 시작 ---------- */
 document.addEventListener('keydown', e => {
   if (!R || !$('#modal').hidden || e.ctrlKey || e.metaKey || e.altKey) return;
-  if (/^[1-4]$/.test(e.key) && R.picked === null) { e.preventDefault(); pick(+e.key - 1); }
-  else if (e.key === 'Enter' && R.picked !== null) { e.preventDefault(); next(); }
+  if (/^[1-4]$/.test(e.key) && R.picked === null) { e.preventDefault(); (R.k ? kPick : pick)(+e.key - 1); }
+  else if (e.key === 'Enter' && R.picked !== null) { e.preventDefault(); (R.k ? kNext : next)(); }
 });
 $$('#tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
 (async function init() {
@@ -448,5 +470,6 @@ $$('#tabs button').forEach(b => b.onclick = () => setTab(b.dataset.tab));
   } catch (e) {
     $('#view').innerHTML = '<p class="empty">데이터를 불러오지 못했어요. 새로고침해 주세요.</p>'; return;
   }
+  await kLoad();
   setTab('home');
 })();
