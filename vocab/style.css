@@ -131,3 +131,5 @@ h2{font-size:1.05rem;margin:0 0 10px}
 .sm{font-weight:700;font-size:1.02rem}
 .sp{font-size:.9rem;background:rgba(255,255,255,.7);border-radius:12px;padding:10px 12px}
 .big{font-size:2.6rem}
+.tip-box{background:var(--gold-soft);border-radius:12px;padding:10px 12px;font-size:.9rem;line-height:1.55;text-align:left}
+.tip-box b{display:block;color:#9a6a00;font-size:.85rem;margin-bottom:2px}
