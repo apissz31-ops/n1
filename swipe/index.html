@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>N1 문법 스와이프</title>
+<meta name="description" content="N1 문법 234개를 순접·역접·강조·문말 4방향으로 분류하며 외우는 스와이프 카드">
+<meta name="theme-color" content="#fbf4ea">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="N1 스와이프">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap" id="app">
+  <!-- 홈 -->
+  <section id="home" class="screen">
+    <header class="top">
+      <div>
+        <h1>N1 문법 스와이프</h1>
+        <p class="sub">문법을 보고 방향부터 감 잡기</p>
+      </div>
+      <span class="dday" id="dday"></span>
+    </header>
+
+    <div class="days" id="days"></div>
+
+    <div class="panel guide">
+      <h2>방향 규칙</h2>
+      <div class="cross">
+        <div class="g g-up"><b>↑ 강조·한정</b><span>극단(すら·だに), 한정(のみ·ならでは), 비한정(はおろか·のみならず), 열거(といい～といい), 화제(ときたら)</span></div>
+        <div class="g g-left"><b>← 순접</b><span>이유·조건·시간·목적·계기·근거. 앞 내용이 뒤로 그대로 이어짐</span></div>
+        <div class="g g-right"><b>역접 →</b><span>양보·역접·대비·무시. 앞 내용과 반대로 꺾임</span></div>
+        <div class="g g-down"><b>↓ 문말·태도</b><span>문장 끝에서 판단·감정·의무·불가능·경향·모양을 나타냄</span></div>
+      </div>
+      <p class="tip">헷갈리면 이렇게 판단해: 문장 끝에 붙어 말하는 사람의 판단·기분이면 ↓, 앞뒤를 잇는데 흐름이 그대로면 ←, 꺾이면 →, 어느 쪽도 아니고 무언가를 부각하거나 한정하면 ↑.</p>
+    </div>
+
+    <div class="row">
+      <button class="btn ghost" id="btnWrong">오답 목록</button>
+      <button class="btn ghost" id="btnAll">234개 전체 섞기</button>
+    </div>
+    <button class="link" id="btnReset">진도 초기화</button>
+  </section>
+
+  <!-- 플레이 -->
+  <section id="play" class="screen" hidden>
+    <header class="bar">
+      <button class="icon" id="btnHome" aria-label="홈">✕</button>
+      <div class="bar-mid">
+        <b id="pTitle">Day 1</b>
+        <div class="meter"><i id="pBar"></i></div>
+      </div>
+      <span class="count" id="pCount">0/0</span>
+    </header>
+
+    <div class="stage" id="stage">
+      <span class="edge e-up">↑ 강조·한정</span>
+      <span class="edge e-left">←<br>순<br>접</span>
+      <span class="edge e-right">→<br>역<br>접</span>
+      <span class="edge e-down">↓ 문말·태도</span>
+      <div class="card" id="card">
+        <div class="hint" id="hint"></div>
+        <div class="pattern" id="pattern"></div>
+        <div class="again" id="again" hidden>다시 나온 카드</div>
+      </div>
+    </div>
+
+    <div class="pad">
+      <button class="dir d-L" data-dir="L">←<small>순접</small></button>
+      <button class="dir d-U" data-dir="U">↑<small>강조·한정</small></button>
+      <button class="dir d-D" data-dir="D">↓<small>문말·태도</small></button>
+      <button class="dir d-R" data-dir="R">→<small>역접</small></button>
+    </div>
+  </section>
+
+  <!-- 오답 목록 -->
+  <section id="wrongs" class="screen" hidden>
+    <header class="bar">
+      <button class="icon" id="btnHome2" aria-label="홈">✕</button>
+      <div class="bar-mid"><b>오답 목록</b></div>
+      <span></span>
+    </header>
+    <p class="sub pad-x" id="wrongSum"></p>
+    <button class="btn" id="btnWrongPlay">오답만 다시 풀기</button>
+    <ul class="wlist" id="wlist"></ul>
+  </section>
+</div>
+
+<!-- 결과 시트 -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-in" id="sheetIn">
+    <div class="verdict" id="verdict"></div>
+    <div class="ans" id="ans"></div>
+    <div class="sp" id="sPattern"></div>
+    <div class="sm" id="sMeaning"></div>
+    <div class="sc" id="sConn"></div>
+    <div class="ex">
+      <p class="ja" id="sJa"></p>
+      <p class="ko" id="sKo"></p>
+    </div>
+    <details class="note"><summary>해설 보기</summary><p id="sNote"></p></details>
+    <button class="btn" id="btnNext">다음 카드</button>
+  </div>
+</div>
+
+<!-- 완료 -->
+<div class="sheet" id="done" hidden>
+  <div class="sheet-in center">
+    <div class="big">🎉</div>
+    <h2 id="dTitle">Day 1 완료</h2>
+    <p id="dStat"></p>
+    <div id="dCats"></div>
+    <div class="row">
+      <button class="btn ghost" id="btnDoneWrong">이번 오답만 다시</button>
+      <button class="btn" id="btnDoneHome">홈으로</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
