@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>N1 특강 문법</title>
+<meta name="description" content="황지영 N1 적중특강 출제 예상 문형 14개를 3회독하고 예상 문제로 확인하는 앱">
+<meta name="theme-color" content="#fbf4ea">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="N1 특강문법">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;800&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top" id="hdr">
+    <div>
+      <h1>N1 특강 문법</h1>
+      <p class="sub">예상 문형 14개 · 시험 전 3회독</p>
+    </div>
+    <span class="dday" id="dday"></span>
+  </header>
+  <nav class="tabs" id="tabs">
+    <button data-tab="home" class="on">회독</button>
+    <button data-tab="test">실전 문제</button>
+    <button data-tab="weak">약점</button>
+    <button data-tab="list">문형 목록</button>
+  </nav>
+  <main id="view"></main>
+</div>
+
+<!-- 플레이 화면 -->
+<section id="play" class="play" hidden>
+  <header class="bar">
+    <button class="icon" id="btnQuit" aria-label="그만하기">✕</button>
+    <div class="meter big"><i id="pBar"></i></div>
+    <span class="streak" id="pStreak"></span>
+  </header>
+  <div class="ptitle" id="pTitle"></div>
+  <div class="qbox" id="qbox"></div>
+  <div class="choices" id="choices"></div>
+</section>
+
+<!-- 결과 시트 -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-in" id="sheetIn">
+    <div class="verdict" id="verdict"></div>
+    <div id="sBody"></div>
+    <button class="btn" id="btnNext">계속</button>
+  </div>
+</div>
+
+<!-- 완료 -->
+<div class="sheet" id="done" hidden>
+  <div class="sheet-in center">
+    <div class="big">🎉</div>
+    <h2 id="dTitle"></h2>
+    <p id="dStat"></p>
+    <div class="row" id="dBtns"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

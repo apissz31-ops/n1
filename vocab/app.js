@@ -155,7 +155,7 @@
     const s = S.stat[w.id];
     const n = s ? (s.w ? `<span class="wl-n bad">✕${s.w}</span>` : `<span class="wl-n good">○${s.c}</span>`) : '';
     return `<li><div class="wl-top"><span class="wl-w">${w.star ? '<span class="star">★</span>' : ''}${esc(w.w)}</span>${w.r !== w.w ? `<span class="wl-r">${esc(w.r)}</span>` : ''}${n}</div>
-      <div class="wl-m">${esc(w.m)}</div><div class="wl-p">${esc(w.p)}</div></li>`;
+      <div class="wl-m">${esc(w.m)}</div><div class="wl-p">👩‍🏫 ${esc(w.p)}</div></li>`;
   }
 
   /* ---------- 단어장 ---------- */
@@ -295,7 +295,7 @@
     $('qbox').innerHTML = `<div class="flip" id="flip"><div class="qword">${esc(w.w)}</div><div class="tap">뜻과 읽기를 떠올린 뒤 눌러서 확인</div>${again}</div>`;
     $('choices').innerHTML = '<button class="btn ghost" id="cShow">정답 보기</button>';
     const show = () => {
-      $('flip').innerHTML = `<div class="qword">${esc(w.w)}</div><div class="back">${w.r !== w.w ? `<div class="sr">${esc(w.r)}</div>` : ''}<div class="sm">${esc(w.m)}</div><div class="wl-p">${esc(w.p)}</div></div>`;
+      $('flip').innerHTML = `<div class="qword">${esc(w.w)}</div><div class="back">${w.r !== w.w ? `<div class="sr">${esc(w.r)}</div>` : ''}<div class="sm">${esc(w.m)}</div><div class="tip-box"><b>👩‍🏫 강사 포인트</b>${esc(w.p)}</div></div>`;
       $('choices').innerHTML = '<div class="row"><button class="btn bad" id="cNo">몰라요</button><button class="btn good" id="cYes">알아요</button></div>';
       $('cNo').onclick = () => mark(w, false);
       $('cYes').onclick = () => mark(w, true);
@@ -325,7 +325,7 @@
     sheet(ok, ok ? (S.sess.streak >= 3 ? `○ 정답 · ${S.sess.streak}연속!` : '○ 정답') : '✕ 오답 · 세 문제 뒤에 다시 나와요',
       `<div class="sw">${w.star ? '<span class="star">★</span>' : ''}${esc(w.w)}</div>
        ${w.r !== w.w ? `<div class="sr">${esc(w.r)}</div>` : ''}
-       <div class="sm">${esc(w.m)}</div><div class="sp">${esc(w.p)}</div>`);
+       <div class="sm">${esc(w.m)}</div><div class="tip-box"><b>👩‍🏫 강사 포인트</b>${esc(w.p)}</div>`);
   }
 
   function askTest(q) {
@@ -340,7 +340,7 @@
       const w = BY[q.wid];
       sheet(ok, ok ? '○ 정답' : `✕ 오답 · 정답: ${ans}`,
         `<div class="sm">${esc(q.e)}</div>
-         <div class="sp"><b class="ja">${esc(w.w)}</b>${w.r !== w.w ? ` (${esc(w.r)})` : ''} · ${esc(w.m)}<br>${esc(w.p)}</div>`);
+         <div class="sp"><b class="ja">${esc(w.w)}</b>${w.r !== w.w ? ` (${esc(w.r)})` : ''} · ${esc(w.m)}</div><div class="tip-box"><b>👩‍🏫 강사 포인트</b>${esc(w.p)}</div>`);
     });
   }
 
